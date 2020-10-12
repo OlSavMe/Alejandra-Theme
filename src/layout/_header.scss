@@ -1,0 +1,75 @@
+header {
+  background: $dark;
+  height: 80px;
+  display: flex;
+  padding: 1rem 1rem 0 1rem;
+  justify-content: flex-start;
+  background-color: #0a0a0a;
+  z-index: 999;
+
+  @include no-mobile {
+    justify-content: space-around;
+  }
+
+  .burger {
+    width: auto;
+    height: 2rem;
+
+    @include no-mobile {
+      display: none;
+    }
+  }
+
+  li {
+    font-size: 1.2rem;
+    letter-spacing: normal;
+  }
+
+  /* Desktop Navigation */
+
+  .desktop-navigation {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+
+    @include no-mobile {
+      display: flex;
+    }
+
+    li a {
+      padding: 0 1rem;
+      color: #daa520;
+      text-decoration: none;
+    }
+  }
+
+  /* Desktop Phone and SOME */
+
+  .phone-some {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+
+    @include no-mobile {
+      display: flex;
+    }
+
+    li {
+      padding: 0 0.5rem;
+      color: #daa520;
+      text-decoration: none;
+
+      img {
+        height: 1.3rem;
+        width: auto;
+      }
+    }
+
+    li:last-of-type {
+      padding: 0 0 0 2rem;
+      font-size: 1rem;
+    }
+  }
+}

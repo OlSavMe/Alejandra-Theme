@@ -1,0 +1,37 @@
+/* Responsiveness */
+
+$breakpoints: (
+  mobile: 425px,
+  tablet: 769px,
+  laptop: 1024px,
+  laptop-large: 1440px,
+  desktop: 1800px,
+);
+
+@mixin max-media($keys...) {
+  @each $key in $keys {
+    @media (max-width: map-get($breakpoints, $key)) {
+      @content;
+    }
+  }
+}
+
+@mixin min-media($keys...) {
+  @each $key in $keys {
+    @media (min-width: map-get($breakpoints, $key)) {
+      @content;
+    }
+  }
+}
+
+@mixin no-mobile {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin short-mobile {
+  @media only screen and (max-width: 425px) and (max-height: 630px) {
+    @content;
+  }
+}

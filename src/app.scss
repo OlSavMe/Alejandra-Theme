@@ -1,0 +1,24 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "variables/colours";
+@import "variables/mixins";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/content";
+@import "pages/front-page";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  margin-top: 0;
+}
+body {
+  margin: 0;
+  height: 100%;
+  background-color: $dark;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 500;
+}
