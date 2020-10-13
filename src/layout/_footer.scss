@@ -4,17 +4,17 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 5%;
-  padding: 10%;
+  margin: 5% auto;
+  width: 70%;
   color: #daa520;
   border-top: 2px solid #daa520;
 
-  @include no-mobile {
+  @include min-media(tablet) {
     flex-direction: row;
   }
 
-  @include min-media(tablet) {
-    padding: 2% 10%;
+  @include min-media(laptop) {
+    width: 50%;
   }
 
   ul {

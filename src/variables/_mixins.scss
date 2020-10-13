@@ -35,3 +35,13 @@ $breakpoints: (
     @content;
   }
 }
+
+/* invisible scrollbar */
+
+@mixin scrollbars {
+  // Chrome, Edge, Opera, Safari, iOS
+  ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+}

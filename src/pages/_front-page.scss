@@ -2,7 +2,7 @@
 
 p,
 li {
-  font-size: 1rem;
+  font-size: 1.1rem;
   @include min-media(mobile) {
     font-size: 1.1rem;
     letter-spacing: 0.2rem;
@@ -21,11 +21,9 @@ h2 {
   letter-spacing: 1vw;
   @include min-media(mobile) {
     font-size: 1.9rem;
-    letter-spacing: 1.2vw;
   }
   @include min-media(tablet) {
     font-size: 2.2rem;
-    letter-spacing: 1.2vw;
   }
 }
 
@@ -139,12 +137,21 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  letter-spacing: 0.1rem;
   align-items: center;
-  padding: 5% 0 0 0;
+
+  @include min-media(mobile) {
+    width: 90%;
+    margin: 5% auto;
+  }
 
   @include min-media(tablet) {
-    padding: 3% 0 0 0;
+    width: 70%;
+    margin: 5% auto;
+  }
+
+  @include min-media(laptop) {
+    width: 50%;
+    margin: 5% auto;
   }
 
   a {
@@ -159,20 +166,20 @@ h2 {
     grid-template-columns: repeat(12, 1fr);
     position: relative;
 
-    @include min-media(mobile) {
-      width: 85%;
-      margin: 7% 0;
-    }
+    // @include min-media(mobile) {
+    //   width: 85%;
+    //   margin: 7% 0;
+    // }
 
-    @include min-media(tablet) {
-      width: 60%;
-      margin: 7% 0;
-    }
+    // @include min-media(tablet) {
+    //   width: 60%;
+    //   margin: 7% 0;
+    // }
 
-    @include min-media(laptop) {
-      width: 50%;
-      margin: 5% 0;
-    }
+    // @include min-media(laptop) {
+    //   width: 50%;
+    //   margin: 5% 0;
+    // }
 
     .pic-container {
       grid-column: 1 / span 5;
@@ -230,20 +237,20 @@ h2 {
     grid-template-columns: repeat(12, 1fr);
     position: relative;
 
-    @include min-media(mobile) {
-      width: 85%;
-      margin: 7% 0;
-    }
+    // @include min-media(mobile) {
+    //   width: 85%;
+    //   margin: 7% 0;
+    // }
 
-    @include min-media(tablet) {
-      width: 60%;
-      margin: 7% 0;
-    }
+    // @include min-media(tablet) {
+    //   width: 60%;
+    //   margin: 7% 0;
+    // }
 
-    @include min-media(laptop) {
-      width: 50%;
-      margin: 5% 0;
-    }
+    // @include min-media(laptop) {
+    //   width: 50%;
+    //   margin: 5% 0;
+    // }
 
     .pic-container {
       grid-column: 8 / -1;
@@ -309,7 +316,7 @@ h2 {
   }
 
   @include min-media(tablet) {
-    padding: 10%;
+    padding: 0;
   }
 
   @include min-media(laptop) {
@@ -319,6 +326,7 @@ h2 {
   h2 {
     font-weight: bold;
     margin: 0.5rem;
+    line-height: 1.5;
 
     @include min-media(mobile) {
       text-align: center;
