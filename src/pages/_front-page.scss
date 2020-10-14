@@ -165,22 +165,9 @@ h2 {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     position: relative;
-
-    // @include min-media(mobile) {
-    //   width: 85%;
-    //   margin: 7% 0;
-    // }
-
-    // @include min-media(tablet) {
-    //   width: 60%;
-    //   margin: 7% 0;
-    // }
-
-    // @include min-media(laptop) {
-    //   width: 50%;
-    //   margin: 5% 0;
-    // }
-
+    @include min-media(mobile) {
+      margin: 5% 0;
+    }
     .pic-container {
       grid-column: 1 / span 5;
       grid-row: 1;
@@ -237,21 +224,9 @@ h2 {
     grid-template-columns: repeat(12, 1fr);
     position: relative;
 
-    // @include min-media(mobile) {
-    //   width: 85%;
-    //   margin: 7% 0;
-    // }
-
-    // @include min-media(tablet) {
-    //   width: 60%;
-    //   margin: 7% 0;
-    // }
-
-    // @include min-media(laptop) {
-    //   width: 50%;
-    //   margin: 5% 0;
-    // }
-
+    @include min-media(mobile) {
+      margin: 5% 0;
+    }
     .pic-container {
       grid-column: 8 / -1;
       grid-row: 1;
@@ -320,7 +295,7 @@ h2 {
   }
 
   @include min-media(laptop) {
-    padding: 15%;
+    padding: 7%;
   }
 
   h2 {
@@ -330,7 +305,7 @@ h2 {
 
     @include min-media(mobile) {
       text-align: center;
-      margin: 5%;
+      margin: 3%;
     }
   }
 

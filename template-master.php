@@ -72,54 +72,69 @@ Template Name: Master
   <h2>GALLERIA</h2>
   <div class="master-galleria">
       <figure>  <img
-      src="<?php echo get_template_directory_uri() . '/images/pi.png'; ?>"
+      src="<?php echo get_template_directory_uri() . '/images/1.png'; ?>"
       alt="galleria"/></figure>
       <figure> <img
-      src="<?php echo get_template_directory_uri() . '/images/pic.png'; ?>"
+      src="<?php echo get_template_directory_uri() . '/images/3.png'; ?>"
       alt="galleria"
       id="galleria"
     /></figure>
       <figure> 
     <img
-      src="<?php echo get_template_directory_uri() . '/images/pi.png'; ?>"
+      src="<?php echo get_template_directory_uri() . '/images/8.png'; ?>"
       alt="galleria"
       id="galleria"
     /></figure>
-      <figure>
+      <figure> 
+ <img
+   src="<?php echo get_template_directory_uri() . '/images/14.png'; ?>"
+   alt="galleria"
+   id="galleria"
+ /></figure>
+      <figure> <img
+      src="<?php echo get_template_directory_uri() . '/images/15.png'; ?>"
+      alt="galleria"
+      id="galleria"
+    /></figure>
+    <figure>
     <img
-      src="<?php echo get_template_directory_uri() . '/images/pic.png'; ?>"
+      src="<?php echo get_template_directory_uri() . '/images/20.png'; ?>"
       alt="galleria"
       id="galleria"
     /></figure>
       <figure> 
  
  <img
-   src="<?php echo get_template_directory_uri() . '/images/pi.png'; ?>"
+   src="<?php echo get_template_directory_uri() . '/images/21.png'; ?>"
    alt="galleria"
    id="galleria"
  /></figure>
       <figure> <img
-      src="<?php echo get_template_directory_uri() . '/images/pic.png'; ?>"
+      src="<?php echo get_template_directory_uri() . '/images/22.png'; ?>"
       alt="galleria"
       id="galleria"
     /></figure>
-   
 
   </div>
   <h2>TUOTTEET</h2>
   <div class="master-galleria">
   <figure> <img
-      src="<?php echo get_template_directory_uri() . '/images/r.png'; ?>"
+      src="<?php echo get_template_directory_uri() . '/images/29.png'; ?>"
       alt="r"
       id="galleria"
     /></figure>
   <figure><img
-      src="<?php echo get_template_directory_uri() . '/images/l.png'; ?>"
+      src="<?php echo get_template_directory_uri() . '/images/28.png'; ?>"
       alt="l"
       id="galleria"
     /></figure>
   <figure>  <img
-      src="<?php echo get_template_directory_uri() . '/images/p.png'; ?>"
+      src="<?php echo get_template_directory_uri() . '/images/30.png'; ?>"
+      alt="l"
+      id="galleria"
+    /></figure>
+    <figure>  <img
+      src="<?php echo get_template_directory_uri() . '/images/18.png'; ?>"
       alt="l"
       id="galleria"
     /></figure>

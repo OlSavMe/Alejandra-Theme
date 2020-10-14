@@ -10294,6 +10294,11 @@ h2 {
   grid-template-columns: repeat(12, 1fr);
   position: relative;
 }
+@media (min-width: 425px) {
+  .team .team-left {
+    margin: 5% 0;
+  }
+}
 .team .team-left .pic-container {
   grid-column: 1/span 5;
   grid-row: 1;
@@ -10342,6 +10347,11 @@ h2 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   position: relative;
+}
+@media (min-width: 425px) {
+  .team .team-right {
+    margin: 5% 0;
+  }
 }
 .team .team-right .pic-container {
   grid-column: 8/-1;
@@ -10408,7 +10418,7 @@ h2 {
 }
 @media (min-width: 1024px) {
   .story {
-    padding: 15%;
+    padding: 7%;
   }
 }
 .story h2 {
@@ -10419,7 +10429,7 @@ h2 {
 @media (min-width: 425px) {
   .story h2 {
     text-align: center;
-    margin: 5%;
+    margin: 3%;
   }
 }
 .story p {
@@ -10484,7 +10494,7 @@ li {
 h1,
 h2 {
   font-size: 1.7rem;
-  letter-spacing: 1vw;
+  letter-spacing: 0.5vw;
   font-weight: bold;
   padding: 3% 0 2% 0;
 }
@@ -10683,8 +10693,13 @@ h2 {
 .master-varaus {
   text-align: center;
   width: 100%;
-  margin: 7rem 0;
+  margin: 5% 0;
   color: #daa520;
+}
+@media (min-width: 769px) {
+  .master-varaus {
+    margin: 2% 0;
+  }
 }
 .master-varaus .iframe-container {
   position: relative;
