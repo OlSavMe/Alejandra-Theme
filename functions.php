@@ -33,3 +33,28 @@ register_nav_menus(
 
 add_filter( 'show_admin_bar', '__return_false' );
 
+
+// Adding custom posts
+
+function master_post_type() {
+
+    $args = array (
+        'labels'=> array (
+            'name' => 'Masters', // label shown in admin menu
+            'singular_name' => 'master', // name for one object of the post type
+        ),
+        'hierarchical' => true,
+        'public' => true, // visible both in the admin panel and front end
+        'has_archive' => true, // enables archiving of the custom posts
+        'menu_icon'   => 'dashicons-universal-access-alt', // post type icon in admin menu 
+        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'), // features supported by the post type
+    );
+
+    register_post_type('master', $args); 
+
+}
+
+add_action('init', 'master_post_type'); // fires after loadng is completed but before any headers sent
+
+
+

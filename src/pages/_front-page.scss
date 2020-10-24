@@ -146,12 +146,10 @@ h2 {
 
   @include min-media(tablet) {
     width: 70%;
-    margin: 5% auto;
   }
 
   @include min-media(laptop) {
     width: 50%;
-    margin: 5% auto;
   }
 
   a {

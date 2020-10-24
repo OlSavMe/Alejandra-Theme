@@ -1,11 +1,5 @@
 <?php  get_header();?>
 
-<?php  if (have_posts()) : while (have_posts()) : the_post();?>
-<?php  the_content();?>
-<?php  endwhile; endif;?>
-
-
-
 <div class="hero">
   <div class="img-container">
     <img src="<?php echo get_template_directory_uri() . '/images/logo-screen.png'; ?>" alt="logo" />
@@ -18,6 +12,12 @@
     </a>
   </div>
 </div>
+
+
+
+<?php get_template_part('includes/section', 'masters');?>
+
+
 
 <section class="team" id="team">
 
