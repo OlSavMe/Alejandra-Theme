@@ -17,9 +17,12 @@ $the_query = new WP_Query( $args ); ?>
 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 <?php $mastercard = get_field('master_card');?> 
 
-<a href="<?php echo site_url('/valeriia')?>" class="master-card">
-<div class="pic-container">
-  <img src="<?php echo $mastercard['master_image']['url'];?>"  alt="<?php echo $mastercard['master_name'];?>"  />
+<a href="<?php echo the_permalink()?>" class="master-card">
+  <div class="pic-container">
+    <img
+      src="<?php echo $mastercard['master_image']['url'];?>"
+      alt="<?php echo $mastercard['master_name'];?>"
+    />
   </div>
   <h1 class="card-heading"><?php echo $mastercard['master_name'];?></h1>
   <div class="grey-container">

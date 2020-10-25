@@ -1,0 +1,22 @@
+.master-galleria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-gap: 0.5rem;
+  width: 100%;
+
+  @include min-media(mobile) {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-gap: 1rem;
+  }
+
+  // @include min-media(laptop) {
+  //   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  // }
+
+  img {
+    width: 100%;
+    height: auto;
+    // display: block;
+    object-fit: contain;
+  }
+}

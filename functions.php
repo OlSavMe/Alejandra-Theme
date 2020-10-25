@@ -47,6 +47,7 @@ function master_post_type() {
         'public' => true, // visible both in the admin panel and front end
         'has_archive' => true, // enables archiving of the custom posts
         'menu_icon'   => 'dashicons-universal-access-alt', // post type icon in admin menu 
+        'rewrite' => array('slug' => 'masters','with_front' => false),
         'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'), // features supported by the post type
     );
 
