@@ -3,6 +3,7 @@
 @import "layout/header";
 @import "layout/footer";
 @import "layout/content";
+@import "layout/section-masters";
 @import "pages/front-page";
 @import "pages/template-master";
 
@@ -21,7 +22,7 @@ body {
   padding: 0;
   width: 100vw;
   height: auto;
-  background-color: white;
+  background-color: $dark;
   font-family: "Times New Roman", Times, serif;
   // font-weight: 500;
 }

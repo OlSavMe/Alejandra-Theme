@@ -14,14 +14,10 @@
 </div>
 
 
-
+<section class="team" id="team">
 <?php get_template_part('includes/section', 'masters');?>
 
-
-
-<section class="team" id="team">
-
-<a href="<?php echo site_url('/valeriia')?>"  class="team-left">
+<!-- <a href="<?php echo site_url('/valeriia')?>"  class="team-left">
 <div class="pic-container">
   <img src="<?php echo get_template_directory_uri() . '/images/valeriia.png'; ?>"  alt="valeriia" />
   </div>
@@ -94,8 +90,7 @@
       <li>Varaa aika &rsaquo;</li>
     </ul>
   </div>
-</a> 
-
+</a>  -->
     </section>
 
 <section class="story">
