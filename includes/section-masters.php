@@ -1,15 +1,12 @@
 
 <?php 
-
 // Iterating though the Masters posts
-
 $args = array(  
     'post_type' => 'master', // name of the post type
     'post_status' => 'publish',
     'posts_per_page' => -1, // displays all available posts on one page
     'order' => 'ASC', // earliest on top
 );
-
 
 $the_query = new WP_Query( $args ); ?>
 

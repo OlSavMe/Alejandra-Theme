@@ -36,13 +36,17 @@ h2 {
   letter-spacing: 0.3rem;
   height: 100vh;
 
+  @include landscape-mobile-tablet {
+    height: auto;
+  }
+
   /* hero-image */
 
   .img-container {
     // display: flex;
     justify-content: center;
     // width: 100%;
-    margin: 5% 0;
+    margin: 7% 0 3% 0;
 
     img {
       width: 20rem;
@@ -55,6 +59,11 @@ h2 {
 
       @include min-media(laptop) {
         width: 28rem;
+        height: auto;
+      }
+
+      @include landscape-mobile-tablet {
+        width: 20rem;
         height: auto;
       }
     }
@@ -78,7 +87,7 @@ h2 {
       display: inline-block;
       background-color: #daa520;
       color: #0a0a0a;
-      padding: 0.2rem 2.3rem;
+      padding: 0.4rem 2.3rem;
       text-align: center;
       text-decoration: none;
       display: inline-block;
@@ -88,17 +97,17 @@ h2 {
       border: 2px solid transparent;
       transition: all 0.5s;
 
-      @include short-mobile {
-        margin: 0;
-      }
+      // @include short-mobile {
+      //   margin: 0;
+      // }
 
       @include min-media(tablet) {
-        padding: 0.3rem 3rem;
+        padding: 0.4rem 3rem;
         font-size: 1.9rem;
       }
 
       @include min-media(laptop) {
-        padding: 0.3rem 4rem;
+        padding: 0.4rem 4rem;
         font-size: 2.2rem;
       }
     }
@@ -112,6 +121,11 @@ h2 {
       position: relative;
       text-decoration: none;
       bottom: 2rem;
+
+      @include landscape-mobile-tablet {
+        position: unset;
+        margin-top: 1rem;
+      }
 
       p {
         color: #daa520;

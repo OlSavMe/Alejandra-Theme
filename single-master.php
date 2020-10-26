@@ -40,7 +40,7 @@
 </div>
 
 <section class="master-info">
-  <?php if ($masterprofile['abou']):?>
+  <?php if ($masterprofile['about']):?>
   <h2>TUOTTEET</h2>
   <p>
     <?php echo $masterprofile['about'];?>

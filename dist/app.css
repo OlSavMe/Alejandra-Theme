@@ -272,6 +272,7 @@ footer .footer-right img {
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   grid-gap: 0.5rem;
   width: 100%;
+  margin-bottom: 5%;
 }
 @media (min-width: 425px) {
   .master-galleria {
@@ -311,6 +312,7 @@ h2 {
   letter-spacing: 0.5vw;
   font-weight: bold;
   padding: 3% 0 2% 0;
+  margin: 0;
 }
 @media (min-width: 425px) {
   h1,
@@ -470,6 +472,11 @@ h2 {
   color: white;
   margin-bottom: 4rem;
 }
+.master-info p span {
+  color: #daa520;
+  font-size: larger;
+  padding-right: 0.2rem;
+}
 .master-info h2 {
   color: #daa520;
 }
@@ -482,12 +489,13 @@ h2 {
 }
 @media (min-width: 769px) {
   .master-varaus {
-    margin: 2% 0;
+    width: 80%;
+    margin: 0 auto;
   }
 }
 .master-varaus .iframe-container {
   position: relative;
-  height: 800px;
+  height: 1200px;
   overflow: hidden;
 }
 .master-varaus .iframe-container iframe {
@@ -552,9 +560,14 @@ h2 {
   /* hero-image */
   /* arrow-down group */
 }
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .hero {
+    height: auto;
+  }
+}
 .hero .img-container {
   justify-content: center;
-  margin: 5% 0;
+  margin: 7% 0 3% 0;
 }
 .hero .img-container img {
   width: 20rem;
@@ -569,6 +582,12 @@ h2 {
 @media (min-width: 1024px) {
   .hero .img-container img {
     width: 28rem;
+    height: auto;
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .hero .img-container img {
+    width: 20rem;
     height: auto;
   }
 }
@@ -587,7 +606,7 @@ h2 {
   display: inline-block;
   background-color: #daa520;
   color: #0a0a0a;
-  padding: 0.2rem 2.3rem;
+  padding: 0.4rem 2.3rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -597,23 +616,17 @@ h2 {
   border: 2px solid transparent;
   transition: all 0.5s;
 }
-@media only screen and (max-width: 425px) and (max-height: 630px) {
-  .hero .arrow-group .hero-button:link,
-.hero .arrow-group .hero-button:visited {
-    margin: 0;
-  }
-}
 @media (min-width: 769px) {
   .hero .arrow-group .hero-button:link,
 .hero .arrow-group .hero-button:visited {
-    padding: 0.3rem 3rem;
+    padding: 0.4rem 3rem;
     font-size: 1.9rem;
   }
 }
 @media (min-width: 1024px) {
   .hero .arrow-group .hero-button:link,
 .hero .arrow-group .hero-button:visited {
-    padding: 0.3rem 4rem;
+    padding: 0.4rem 4rem;
     font-size: 2.2rem;
   }
 }
@@ -626,6 +639,12 @@ h2 {
   position: relative;
   text-decoration: none;
   bottom: 2rem;
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .hero .arrow-group .ref {
+    position: unset;
+    margin-top: 1rem;
+  }
 }
 .hero .arrow-group .ref p {
   color: #daa520;
