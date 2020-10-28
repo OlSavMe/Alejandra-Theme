@@ -39,9 +39,7 @@ h2 {
   /* hero-image for page */
 
   .img-page-conainer {
-    // display: flex;
     justify-content: center;
-    // width: 100%;
     margin: 2%;
 
     img {
@@ -64,7 +62,7 @@ h2 {
     bottom: 2rem;
 
     p {
-      color: #daa520;
+      color: $gold;
       padding: 0.3rem;
       margin: 0;
       text-align: center;
@@ -130,7 +128,7 @@ h2 {
         p {
           color: white;
           span {
-            color: #daa520;
+            color: $gold;
             font-size: larger;
             padding-right: 0.2rem;
           }
@@ -144,7 +142,7 @@ h2 {
         color: white;
         margin: 0;
         span {
-          color: #daa520;
+          color: $gold;
           font-size: larger;
           padding-right: 0.2rem;
         }
@@ -181,9 +179,9 @@ h2 {
     }
   }
 
-  h2 {
-    color: #daa520;
-  }
+  // h2 {
+  //   color: #daa520;
+  // }
 }
 
 .master-varaus {

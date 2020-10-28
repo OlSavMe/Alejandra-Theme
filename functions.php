@@ -49,6 +49,7 @@ function master_post_type() {
         'menu_icon'   => 'dashicons-universal-access-alt', // post type icon in admin menu 
         'rewrite' => array('slug' => 'masters','with_front' => false),
         'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'), // features supported by the post type
+        'show_in_rest' => true, // for API endpoint
     );
 
     register_post_type('master', $args); 
@@ -65,12 +66,12 @@ function photo_post_type() {
             'name' => 'Photos', // label shown in admin menu
             'singular_name' => 'photo', // name for one object of the post type
         ),
-        // 'hierarchical' => true,
         'public' => true, // visible both in the admin panel and front end
         'has_archive' => true, // enables archiving of the custom posts
         'menu_icon'   => 'dashicons-format-gallery', // post type icon in admin menu 
         'rewrite' => array('slug' => 'photos','with_front' => false),
         'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'), // features supported by the post type
+        'show_in_rest' => true, // for API endpoint
     );
 
     register_post_type('photo', $args); 
@@ -78,3 +79,38 @@ function photo_post_type() {
 }
 
 add_action('init', 'photo_post_type'); // fires after loadng is completed but before any headers sent
+
+// Adding custom taxonomies
+
+
+function type_master_taxonomy() {
+    $args = array (
+        'labels'=> array (
+            'name' => 'master', // label shown in admin menu
+            'singular_name' => 'master', 
+        ),
+        'public' => true, // visible both in the admin panel and front end
+        'hierarchical' => true, // category-kind taxonomy
+        'show_in_rest' => true, // for API endpoint
+    );
+
+    register_taxonomy('master', array('photo'), $args); 
+}
+
+add_action('init', 'type_master_taxonomy'); // fires after loadng is completed but before any headers sent
+
+function type_photo_taxonomy() {
+    $args = array (
+        'labels'=> array (
+            'name' => 'type', // label shown in admin menu
+            'singular_name' => 'type', 
+        ),
+        'public' => true, // visible both in the admin panel and front end
+        'hierarchical' => true, // category-kind taxonomy
+        'show_in_rest' => true, // for API endpoint
+    );
+
+    register_taxonomy('type', array('photo'), $args); 
+}
+
+add_action('init', 'type_photo_taxonomy'); // fires after loadng is completed but before any headers sent

@@ -2,6 +2,9 @@
 <?php $mastercard = get_field('master_card');?>
 <?php $masterprofile = get_field('master_profile');?>
 
+ <p><?php echo the_title();?></p> 
+
+<?php $name = the_title();?>
 <div class="master">
   <div class="img-page-conainer">
     <img
@@ -58,10 +61,8 @@
     <?php echo $masterprofile['service_description'];?>
   </p>
   <?php endif; ?>
-  <h2>GALLERIA</h2>
-  <?php get_template_part('includes/section', 'galleria');?>
-  <h2>TUOTTEET</h2>
-  <?php get_template_part('includes/section', 'galleria');?>
+  <?php get_template_part('includes/section', 'works-galleria');?>
+  <?php get_template_part('includes/section', 'product-galleria');?>
 </section>
 
 <section class="master-varaus" id="master-varaus">

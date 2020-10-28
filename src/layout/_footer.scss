@@ -6,7 +6,7 @@ footer {
   justify-content: space-between;
   margin: 8rem auto;
   width: 70%;
-  color: #daa520;
+  color: $gold;
   border-top: 2px solid #daa520;
 
   @include min-media(tablet) {
@@ -47,7 +47,7 @@ footer {
 
       a {
         text-decoration: none;
-        color: #daa520;
+        color: $gold;
       }
     }
 
@@ -75,7 +75,7 @@ footer {
 
     a {
       text-decoration: none;
-      color: #daa520;
+      color: $gold;
     }
 
     img {

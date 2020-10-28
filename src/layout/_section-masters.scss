@@ -4,14 +4,10 @@
 
 .card-heading {
   text-transform: uppercase;
-  color: #daa520;
+  color: $gold;
   font-weight: bold;
-  padding: 0;
   @include min-media(mobile) {
-    padding: 3%;
-  }
-  @include min-media(tablet) {
-    padding: 5%;
+    padding: 10% 0;
   }
 }
 
@@ -61,7 +57,7 @@
     }
 
     .varaa {
-      color: #daa520;
+      color: $gold;
       padding: 10% 10% 10% 40%;
     }
   }
@@ -114,7 +110,7 @@
     }
 
     .varaa {
-      color: #daa520;
+      color: $gold;
       padding: 10%;
     }
   }

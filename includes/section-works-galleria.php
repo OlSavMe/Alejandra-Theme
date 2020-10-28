@@ -2,10 +2,12 @@
 <?php 
 
 /*
-Galleria reusable template partial
+Galleria of works, reusable template partial
 */
 ?>
-  <div class="master-galleria">
+  <!-- <p><?php echo $name;?></p> -->
+ 
+
 
 
   <?php 
@@ -16,17 +18,25 @@ $args = array(
     'posts_per_page' => 8, // displays all available posts on one page
     'order' => 'ASC', // earliest on top
     'tax_query' => array(
-      array(
-        'taxonomy' => 'master',
-        'field' => 'slug',
-        'terms' => 'common'
-      ),
-    ), 
+        'relation' => 'AND',
+        array(
+            'taxonomy' => 'type',
+            'field'    => 'slug',
+            'terms'    => 'works',
+        ),
+        array(
+            'taxonomy' => 'master',
+            'field' => 'slug',
+            'terms' => $name
+        ),
+    ),
 );
 
 $the_query = new WP_Query( $args ); ?>
 
 <?php if ( $the_query->have_posts() ) : ?>
+    <h2>GALLERIA</h2>
+    <div class="master-galleria">
 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 <?php $photo = get_field('photo');?> 
 <img
@@ -35,9 +45,17 @@ src="<?php echo $photo['url'];?>"
     />
 
 <?php endwhile; ?>
+</div>
 <?php wp_reset_postdata(); ?>
  
 <?php else : ?>
-    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+    <p></p>
 <?php endif; ?>
-  </div>
+ 
+
+
+
+
+
+
+

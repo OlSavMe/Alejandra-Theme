@@ -1,3 +1,7 @@
+h2 {
+  color: #daa520;
+}
+
 .master-galleria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -6,18 +10,15 @@
   margin-bottom: 5%;
 
   @include min-media(mobile) {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   }
 
-  // @include min-media(laptop) {
-  //   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  // }
+  @include min-media(laptop) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 
   img {
     width: 100%;
-    height: auto;
-    // display: block;
-    object-fit: contain;
+    min-height: 100%;
   }
 }
