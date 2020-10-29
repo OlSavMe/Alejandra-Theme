@@ -1,13 +1,12 @@
-
 <?php 
 
 /*
 Galleria of products, reusable template partial
 */
 ?>
-  <!-- <p><?php echo $name;?></p> -->
- 
-  <?php 
+<!-- <p><?php echo $name;?></p> -->
+
+<?php 
 // Iterating though the Photos posts
 $args = array(  
     'post_type' => 'photo', // name of the post type
@@ -32,19 +31,16 @@ $args = array(
 $the_query = new WP_Query( $args ); ?>
 
 <?php if ( $the_query->have_posts() ) : ?>
-    <h2>TUOTTEET</h2>
-    <div class="master-galleria">
-<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-<?php $photo = get_field('photo');?> 
-<img
-src="<?php echo $photo['url'];?>"
-      alt="<?php the_title();?>"
-    />
+<h2>TUOTTEET</h2>
+<div class="master-galleria">
+    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+    <?php $photo = get_field('photo');?>
+    <img src="<?php echo $photo['url'];?>" alt="<?php the_title();?>" />
 
-<?php endwhile; ?>
-        </div>
+    <?php endwhile; ?>
+</div>
 <?php wp_reset_postdata(); ?>
- 
+
 <?php else : ?>
-    <p></p>
+<p></p>
 <?php endif; ?>

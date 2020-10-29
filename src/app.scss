@@ -1,3 +1,4 @@
+@import "node_modules/bootstrap/scss/bootstrap";
 @import "variables/colours";
 @import "variables/mixins";
 @import "layout/header";
@@ -24,5 +25,8 @@ body {
   height: auto;
   background-color: $dark;
   font-family: "Times New Roman", Times, serif;
-  // font-weight: 500;
+
+  a {
+    text-decoration: none;
+  }
 }

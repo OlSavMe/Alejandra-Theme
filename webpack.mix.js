@@ -15,8 +15,8 @@ mix
   .options({
     processCssUrls: false,
   })
-  .js("src/app.js", "dist/")
-  .sass("src/app.scss", "dist/");
+  .js("src/app.js", "dist/app.js")
+  .sass("src/app.scss", "dist/app.css");
 
 // Full API
 // mix.js(src, output);
