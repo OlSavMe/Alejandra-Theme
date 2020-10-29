@@ -27,7 +27,7 @@ $the_query = new WP_Query( $args ); ?>
 
     <?php if ( $the_query->have_posts() ) : ?>
     <?php 
-  $counter = -1;
+  $counter = 0;
   while ( $the_query->have_posts() ) : $the_query->the_post(); $counter++ 
   ?>
     <?php $photo = get_field('photo');?>
@@ -62,42 +62,3 @@ $the_query = new WP_Query( $args ); ?>
     <a class="previous" onClick="changeSlide(-1)">&#10094;</a>
     <a class="next" onClick="changeSlide(1)">&#10095;</a>
 </div>
-
-<script>
-let slideIndex = 1;
-showSlide(slideIndex);
-
-function openLightbox() {
-    document.getElementById('lightbox').style.display = 'flex';
-}
-
-function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
-}
-
-function changeSlide(n) {
-    showSlide(slideIndex += n);
-};
-
-function toSlide(n) {
-    showSlide(slideIndex = n);
-};
-
-function showSlide(n) {
-
-    const slides = document.getElementsByClassName('slide');
-
-    if (n > slides.length) {
-        slideIndex = 1;
-    };
-
-    if (n < 1) {
-        slideIndex = slides.length;
-    };
-
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = 'none';
-    };
-    slides[slideIndex - 1].style.display = 'flex';
-};
-</script>
