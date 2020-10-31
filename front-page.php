@@ -13,7 +13,6 @@
     </div>
 </div>
 
-
 <section class="team" id="team">
     <?php get_template_part('includes/section', 'masters');?>
 </section>

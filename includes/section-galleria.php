@@ -12,16 +12,17 @@ Galleria reusable template partial
 $args = array(  
     'post_type' => 'photo', // name of the post type
     'post_status' => 'publish',
-    'posts_per_page' => 8, // displays all available posts on one page
+    'posts_per_page' => -1, // displays all available posts on one page
     'order' => 'ASC', // earliest on top
     'tax_query' => array(
       array(
         'taxonomy' => 'master',
         'field' => 'slug',
-        'terms' => 'common'
+        'terms' =>  $name
       ),
     ), 
 );
+
 
 $the_query = new WP_Query( $args ); ?>
 
@@ -41,7 +42,7 @@ $the_query = new WP_Query( $args ); ?>
     <?php endif; ?>
 </div>
 
-<div id="lightbox">
+<div id="lightbox" class='lightbox'>
     <span class="close pointer" onClick="closeLightbox()">&times;</span>
     <div class="lightbox-content">
         <?php if ( $the_query->have_posts() ) : ?>

@@ -24,7 +24,7 @@ h2 {
   }
 }
 
-#lightbox {
+.lightbox {
   display: none;
   position: fixed;
   flex-direction: column;
@@ -34,7 +34,7 @@ h2 {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: scroll;
   background-color: rgba(41, 41, 41, 0.8);
   .lightbox-content {
     position: relative;

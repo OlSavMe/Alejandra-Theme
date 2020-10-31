@@ -32,27 +32,6 @@ function register_my_menus() {
    add_action( 'init', 'register_my_menus' );
 
 
-
-
-
-
-
-
-
-
-// register_nav_menus(
-
-//     array (
-//         'top-menu' => __('Top Menu', 'theme'),
-//         // 'footer-menu' => __('Footer Menu', 'theme'),
-//     )
-//     );
-
-
-
-
-
-
 // Disable the Admin Bar
 
 add_filter( 'show_admin_bar', '__return_false' );

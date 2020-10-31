@@ -10265,7 +10265,7 @@ h2 {
   transition: 500ms all ease-in-out;
 }
 
-#lightbox {
+.lightbox {
   display: none;
   position: fixed;
   flex-direction: column;
@@ -10275,10 +10275,10 @@ h2 {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: scroll;
   background-color: rgba(41, 41, 41, 0.8);
 }
-#lightbox .lightbox-content {
+.lightbox .lightbox-content {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -10288,31 +10288,31 @@ h2 {
   width: 80%;
 }
 @media (min-width: 769px) {
-  #lightbox .lightbox-content {
+  .lightbox .lightbox-content {
     width: 60%;
     max-width: 1200px;
   }
 }
-#lightbox .lightbox-content .slide {
+.lightbox .lightbox-content .slide {
   display: none;
   justify-content: center;
   flex-direction: column;
 }
 @media (min-width: 1024px) {
-  #lightbox .lightbox-content .slide {
+  .lightbox .lightbox-content .slide {
     flex-direction: row;
   }
 }
-#lightbox .lightbox-content .slide .image-slide {
+.lightbox .lightbox-content .slide .image-slide {
   width: 100%;
   height: auto;
 }
 @media (min-width: 1024px) {
-  #lightbox .lightbox-content .slide .image-slide {
+  .lightbox .lightbox-content .slide .image-slide {
     width: 70%;
   }
 }
-#lightbox .lightbox-content .slide .slide-comments {
+.lightbox .lightbox-content .slide .slide-comments {
   background-color: white;
   border-left: 0.5px solid #cccccc;
   min-height: 9rem;
@@ -10321,12 +10321,12 @@ h2 {
   padding: 1rem;
 }
 @media (min-width: 1024px) {
-  #lightbox .lightbox-content .slide .slide-comments {
+  .lightbox .lightbox-content .slide .slide-comments {
     min-width: 18rem;
     max-width: 18rem;
   }
 }
-#lightbox .close {
+.lightbox .close {
   color: white;
   position: absolute;
   top: 10px;
@@ -10334,14 +10334,14 @@ h2 {
   font-size: 35px;
   font-weight: bold;
 }
-#lightbox .close:hover,
-#lightbox .close:focus {
+.lightbox .close:hover,
+.lightbox .close:focus {
   text-decoration: none;
   cursor: pointer;
   color: white;
 }
-#lightbox .previous,
-#lightbox .next {
+.lightbox .previous,
+.lightbox .next {
   cursor: pointer;
   position: absolute;
   text-decoration: none;
@@ -10361,12 +10361,12 @@ h2 {
        user-select: none;
   -webkit-user-select: none;
 }
-#lightbox .next {
+.lightbox .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-#lightbox .previous:hover,
-#lightbox .next:hover {
+.lightbox .previous:hover,
+.lightbox .next:hover {
   color: white;
 }
 

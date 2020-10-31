@@ -34,7 +34,6 @@
 
 <section class="master-info">
     <?php if ($masterprofile['about']):?>
-    <h2>TUOTTEET</h2>
     <p>
         <?php echo $masterprofile['about'];?>
     </p>
@@ -51,8 +50,8 @@
         <?php echo $masterprofile['service_description'];?>
     </p>
     <?php endif; ?>
-    <?php get_template_part('includes/section', 'works-galleria');?>
-    <?php get_template_part('includes/section', 'product-galleria');?>
+    <h2>GALLERIA</h2>
+    <?php get_template_part('includes/section', 'galleria');?>
 </section>
 
 <section class="master-varaus" id="master-varaus">

@@ -46,6 +46,15 @@
         document.getElementById('lightbox').style.display = 'none';
     }
 
+
+    function openLightboxProduct() {
+        document.getElementById('lightbox-product').style.display = 'flex';
+    }
+
+    function closeLightboxProduct() {
+        document.getElementById('lightbox-product').style.display = 'none';
+    }
+
     function changeSlide(n) {
         showSlide(slideIndex += n);
     };
@@ -83,10 +92,16 @@
     }
 
 
-    $('ul.mobile-navigation').children().click(function() {
-        $('mobile-menu').animate({
-            'transform': 'translateX(-100%);'
-        }, 1000);
+    jQuery(document).ready(function() {
+        jQuery('ul.mobile-navigation').children().click(function() {
+            jQuery
+                ('mobile-menu').animate({
+                    'transform': 'translateX(-100%);'
+                }, 1000);
+
+            e.preventDefault();
+        });
+
     });
     </script>
 </footer>

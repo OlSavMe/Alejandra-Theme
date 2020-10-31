@@ -12,8 +12,8 @@
 
         <ul class='mobile-header-some'>
             <li>040 178 2801</li>
-            <li><img src=" <?php echo get_template_directory_uri() . '/images/fb-icon.png'; ?>" alt="fb-icon" /></li>
-            <li><img src="<?php echo get_template_directory_uri() . '/images/inst-icon.png'; ?>" alt="insta-icon" />
+            <li><img src=" <?php echo get_template_directory_uri() . '/images/fb-icon.png'; ?>" alt="fb-icon" />
+                <img src="<?php echo get_template_directory_uri() . '/images/inst-icon.png'; ?>" alt="insta-icon" />
             <li>Suomi | English</li>
             </li>
         </ul>
