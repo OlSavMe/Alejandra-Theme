@@ -80,29 +80,29 @@ h2 {
   .team-item-left {
     margin: 10% 0;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: repeat(14, 1fr);
     position: relative;
-    max-width: 38rem;
+    max-width: 100%;
 
     @include min-media(mobile) {
       margin: 2% 0;
+      max-width: 40rem;
     }
 
     @include min-media(laptop) {
-      max-width: 42rem;
-      margin: 2% auto;
+      max-width: 50rem;
+      margin: 1% auto;
     }
     .pic-container {
       grid-column: 1 / span 4;
       grid-row: 1;
-      padding-bottom: 20%;
+      padding-bottom: 15%;
       z-index: 1;
 
       img {
         width: 100%;
-        height: 100%;
+        height: auto;
         display: none;
-        object-fit: cover;
         @include min-media(mobile) {
           display: block;
         }
@@ -110,18 +110,19 @@ h2 {
     }
 
     .grey-container {
-      grid-column: 1 / 13;
+      grid-column: 1 / 15;
       grid-row: 1;
       background-color: #3d3d3d;
       margin-top: 0;
-      padding: 5%;
+      padding: 0;
 
       @include min-media(mobile) {
-        grid-column: 4 / -1;
-        margin-top: 20%;
+        grid-column: 3 / -1;
+        margin-top: 15%;
       }
 
       .summary {
+        padding: 4%;
         @include min-media(mobile) {
           display: none;
         }
@@ -151,7 +152,7 @@ h2 {
         display: block;
         grid-column: 6 / -1;
         grid-row: 1;
-        margin-top: 33%;
+        margin-top: 22%;
         padding: 5% 5% 5% 0;
       }
     }

@@ -44,28 +44,45 @@ h2 {
     margin: auto;
     padding: 0 0 0 0;
     width: 80%;
-    max-width: 1200px;
+
+    @include min-media(tablet) {
+      width: 60%;
+      max-width: 1200px;
+    }
 
     .slide {
       display: none;
       justify-content: center;
+      flex-direction: column;
+
+      @include min-media(laptop) {
+        flex-direction: row;
+      }
 
       .image-slide {
         width: 100%;
         height: auto;
-
-        @include min-media(tablet) {
-          width: 80%;
-        }
-
         @include min-media(laptop) {
-          width: 60%;
+          width: 70%;
+        }
+      }
+
+      .slide-comments {
+        background-color: white;
+        border-left: 0.5px solid rgb(204, 204, 204);
+        min-height: 9rem;
+        color: black;
+        font-size: 1rem;
+        padding: 1rem;
+        @include min-media(laptop) {
+          min-width: 18rem;
+          max-width: 18rem;
         }
       }
     }
   }
   .close {
-    color: $gold;
+    color: white;
     position: absolute;
     top: 10px;
     right: 25px;
@@ -75,9 +92,9 @@ h2 {
 
   .close:hover,
   .close:focus {
-    color: white;
     text-decoration: none;
     cursor: pointer;
+    color: white;
   }
 
   .previous,
@@ -91,9 +108,9 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     margin-top: -50px;
-    color: $gold;
+    color: rgb(197, 197, 197);
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 3rem;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;

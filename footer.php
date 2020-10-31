@@ -2,13 +2,15 @@
 
     <div class="footer-left">
 
-        <?php wp_nav_menu(
+        <?php
+        wp_nav_menu( array( 
+            'theme_location' => 'footer-menu',
+            'menu_class' => 'footer-navigation',
+            'fallback_cb' => false
+         ) );
+        ?>
 
-array (
-    'theme-location' => 'footer-menu',
-    'menu_class' => 'footer-navigation'
-)
-); ?>
+
         <ul class="some">
             <li><img src="<?php echo get_template_directory_uri() . '/images/fb-icon.png'; ?>" alt="fb-icon" /></li>
             <li><img src="<?php echo get_template_directory_uri() . '/images/inst-icon.png'; ?>" alt="insta-icon" />
@@ -69,6 +71,23 @@ array (
         };
         slides[slideIndex - 1].style.display = 'flex';
     };
+
+    // mobile menu with jQuery
+
+    function openMenu() {
+        document.getElementById('mobile-menu').style.transform = 'translateX(0)';
+    }
+
+    function closeMenu() {
+        document.getElementById('mobile-menu').style.transform = 'translateX(-100%)';
+    }
+
+
+    $('ul.mobile-navigation').children().click(function() {
+        $('mobile-menu').animate({
+            'transform': 'translateX(-100%);'
+        }, 1000);
+    });
     </script>
 </footer>
 <?php wp_footer(); ?>

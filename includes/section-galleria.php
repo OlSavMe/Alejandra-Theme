@@ -50,8 +50,12 @@ $the_query = new WP_Query( $args ); ?>
   while ( $the_query->have_posts() ) : $the_query->the_post(); $counter++ 
   ?>
         <?php $photo = get_field('photo');?>
+        <?php $comments = get_field('photo_comments');?>
         <div class="slide">
             <img src="<?php echo $photo['url'];?>" alt="<?php the_title();?>" class="image-slide" />
+            <section class="slide-comments">
+                <?php echo $comments;?>
+            </section>
         </div>
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>

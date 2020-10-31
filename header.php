@@ -9,21 +9,27 @@
 
 <body>
     <header>
-        <img class='burger' src="<?php echo get_template_directory_uri() . '/images/burger.png'; ?>" alt="burger" />
-        <?php wp_nav_menu(
+        <img class='burger' src="<?php echo get_template_directory_uri() . '/images/burger.png'; ?>" alt="burger"
+            onClick="openMenu()" />
+        <?php get_template_part('includes/section', 'menu');?>
 
-        array (
-            'theme-location' => 'top-menu',
-            'menu_class' => 'desktop-navigation'
-        )
-    ); ?>
-        <ul class="phone-some">
+        <?php
+        wp_nav_menu( array( 
+            'theme_location' => 'header-menu',
+            'menu_class' => 'desktop-navigation',
+            'fallback_cb' => false,
+            'container' => false
+         ) );
+        ?>
+
+
+
+        <ul class='header-some'>
             <li>040 178 2801</li>
-            <li><img src="<?php echo get_template_directory_uri() . '/images/fb-icon.png'; ?>" alt="fb-icon" /></li>
+            <li><img src=" <?php echo get_template_directory_uri() . '/images/fb-icon.png'; ?>" alt="fb-icon" /></li>
             <li><img src="<?php echo get_template_directory_uri() . '/images/inst-icon.png'; ?>" alt="insta-icon" />
-            </li>
-            <li></li>
-            <li></li>
             <li>Suomi | English</li>
+            </li>
         </ul>
+
     </header>

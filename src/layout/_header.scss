@@ -44,7 +44,7 @@ header {
 
   /* Desktop Phone and SOME */
 
-  .phone-some {
+  .header-some {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -59,6 +59,10 @@ header {
       color: $gold;
       text-decoration: none;
 
+      a {
+        color: $gold;
+      }
+
       img {
         height: 1.3rem;
         width: auto;
@@ -66,8 +70,9 @@ header {
     }
 
     li:last-of-type {
-      padding: 0 0 0 2rem;
-      font-size: 1rem;
+      // padding: 0 0 0 2rem;
+      // font-size: 1rem;
+      display: none;
     }
   }
 }

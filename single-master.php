@@ -2,7 +2,6 @@
 <?php $mastercard = get_field('master_card');?>
 <?php $masterprofile = get_field('master_profile');?>
 
-<?php $name = the_title();?>
 <div class="master">
     <div class="img-page-conainer">
         <img src="<?php echo get_template_directory_uri() . '/images/logo-screen.png'; ?>" alt="logo" />

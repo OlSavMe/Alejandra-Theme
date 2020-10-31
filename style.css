@@ -3,3 +3,11 @@ Theme Name: Alejandra2020
 Author: Olga Savka
 Version: 1.0
 */
+
+
+.insta {
+  background-image: url(" http://localhost:8888/wd/inst-icon-2/");
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 5px;
+}
