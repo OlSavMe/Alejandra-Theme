@@ -25,11 +25,7 @@
 
 
         <ul class='header-some'>
-            <li>040 178 2801</li>
-            <li><img src=" <?php echo get_template_directory_uri() . '/images/fb-icon.png'; ?>" alt="fb-icon" /></li>
-            <li><img src="<?php echo get_template_directory_uri() . '/images/inst-icon.png'; ?>" alt="insta-icon" />
-            <li>Suomi | English</li>
-            </li>
+            <?php get_template_part('includes/section', 'some');?>
         </ul>
 
     </header>

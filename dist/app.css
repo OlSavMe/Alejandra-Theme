@@ -10646,6 +10646,12 @@ h2 {
 #mobile-menu .mobile-menu-content .mobile-navigation li {
   border-bottom: 1px solid #e2ab1f;
 }
+#mobile-menu .mobile-menu-content .mobile-header-some li:first-of-type {
+  border: 1px solid #e2ab1f;
+  padding: 0.2rem;
+  text-align: center;
+  max-width: 12rem;
+}
 #mobile-menu .close-cross {
   color: #e2ab1f;
   position: absolute;
