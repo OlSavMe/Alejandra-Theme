@@ -39,6 +39,8 @@ add_filter( 'show_admin_bar', '__return_false' );
 
 // Adding custom posts
 
+// Master profiles
+
 function master_post_type() {
 
     $args = array (
@@ -62,6 +64,8 @@ function master_post_type() {
 add_action('init', 'master_post_type'); // fires after loadng is completed but before any headers sent
 
 
+// Photos for galleries
+
 function photo_post_type() {
 
     $args = array (
@@ -83,8 +87,9 @@ function photo_post_type() {
 
 add_action('init', 'photo_post_type'); // fires after loadng is completed but before any headers sent
 
-// Adding custom taxonomies
 
+
+// Adding custom taxonomies
 
 function type_master_taxonomy() {
     $args = array (
@@ -102,6 +107,7 @@ function type_master_taxonomy() {
 
 add_action('init', 'type_master_taxonomy'); // fires after loadng is completed but before any headers sent
 
+
 function type_photo_taxonomy() {
     $args = array (
         'labels'=> array (
@@ -117,3 +123,50 @@ function type_photo_taxonomy() {
 }
 
 add_action('init', 'type_photo_taxonomy'); // fires after loadng is completed but before any headers sent
+
+
+// Custom posts for contact details
+function some_post_type() {
+
+    $args = array (
+        'labels'=> array (
+            'name' => 'SOME and Phone', // label shown in admin menu
+            'singular_name' => 'some', // name for one object of the post type
+        ),
+        'public' => true, // visible both in the admin panel and front end
+        'has_archive' => true, // enables archiving of the custom posts
+        'menu_icon'   => 'dashicons-share', // post type icon in admin menu 
+        'rewrite' => array('slug' => 'some','with_front' => false),
+        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'), // features supported by the post type
+        'show_in_rest' => true, // for API endpoint
+    );
+
+    register_post_type('some', $args); 
+
+}
+
+add_action('init', 'some_post_type');
+
+// Customs posts for Our Story section
+
+
+function story_post_type() {
+
+    $args = array (
+        'labels'=> array (
+            'name' => 'Our Story', // label shown in admin menu
+            'singular_name' => 'story', // name for one object of the post type
+        ),
+        'public' => true, // visible both in the admin panel and front end
+        'has_archive' => true, // enables archiving of the custom posts
+        'menu_icon'   => 'dashicons-buddicons-community', // post type icon in admin menu 
+        'rewrite' => array('slug' => 'story','with_front' => false),
+        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'), // features supported by the post type
+        'show_in_rest' => true, // for API endpoint
+    );
+
+    register_post_type('story', $args); 
+
+}
+
+add_action('init', 'story_post_type');

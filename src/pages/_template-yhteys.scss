@@ -1,0 +1,57 @@
+.wpcf7 {
+  margin: 0;
+  padding: 0;
+
+  .wpcf7-form-control-wrap {
+    position: relative;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    position: relative;
+    background-color: white;
+    color: $grey;
+    width: 90%;
+    border: 2px solid transparent;
+    padding: 3px;
+    margin: 0.5rem;
+    border-radius: 2px;
+    line-height: 3rem;
+    outline: none;
+    @include min-media(mobile) {
+      min-width: 20rem;
+      width: 100%;
+    }
+    @include min-media(tablet) {
+      min-width: 40rem;
+      width: 100%;
+    }
+    &:hover,
+    &:visited,
+    &:focus {
+      border: 2px solid $gold;
+      outline: none;
+    }
+  }
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    border: 2px solid;
+    background: $gold;
+    color: $dark;
+    padding: 0.5rem 3rem;
+    outline: none;
+
+    &:hover,
+    &:visited {
+      background-color: #0a0a0a;
+      color: $gold;
+      border-color: $gold;
+      outline: none;
+    }
+  }
+}
