@@ -9978,7 +9978,6 @@ header {
   display: flex;
   padding: 1rem 1rem 0 1rem;
   justify-content: flex-start;
-  background-color: #0a0a0a;
   z-index: 999;
   /* Desktop Navigation */
   /* Desktop Phone and SOME */
@@ -10013,7 +10012,7 @@ header .desktop-navigation {
 }
 header .desktop-navigation li a {
   padding: 0 1rem;
-  color: #e2ab1f;
+  color: #dfb13f;
   text-decoration: none;
 }
 header .header-some {
@@ -10029,11 +10028,11 @@ header .header-some {
 }
 header .header-some li {
   padding: 0 0.5rem;
-  color: #e2ab1f;
+  color: #dfb13f;
   text-decoration: none;
 }
 header .header-some li a {
-  color: #e2ab1f;
+  color: #dfb13f;
 }
 header .header-some li img {
   height: 1.3rem;
@@ -10050,7 +10049,7 @@ footer {
   justify-content: space-between;
   margin: 8rem auto;
   width: 70%;
-  color: #e2ab1f;
+  color: #dfb13f;
   border-top: 2px solid #daa520;
   /* left column */
   /* right column */
@@ -10092,7 +10091,7 @@ footer .footer-left ul.footer-navigation {
 }
 footer .footer-left ul.footer-navigation a {
   text-decoration: none;
-  color: #e2ab1f;
+  color: #dfb13f;
 }
 footer .footer-left ul.some {
   display: flex;
@@ -10112,7 +10111,7 @@ footer .footer-right ul:first-of-type li:first-of-type {
 }
 footer .footer-right a {
   text-decoration: none;
-  color: #e2ab1f;
+  color: #dfb13f;
 }
 footer .footer-right img {
   height: 5rem;
@@ -10125,7 +10124,7 @@ a.master-card {
 
 .card-heading {
   text-transform: uppercase;
-  color: #e2ab1f;
+  color: #dfb13f;
   font-weight: bold;
 }
 @media (min-width: 425px) {
@@ -10182,7 +10181,7 @@ a.master-card {
   padding: 5% 0 0 30%;
 }
 .master-card:nth-of-type(odd) .grey-container .varaa {
-  color: #e2ab1f;
+  color: #dfb13f;
   padding: 10% 10% 0 40%;
 }
 
@@ -10234,17 +10233,19 @@ a.master-card {
   padding: 5% 25% 0 3%;
 }
 .master-card:nth-of-type(even) .grey-container .varaa {
-  color: #e2ab1f;
+  color: #dfb13f;
   padding: 10%;
 }
 
 h2 {
-  color: #daa520;
+  color: #dfb13f;
 }
 
 .master-galleria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
   grid-gap: 0.5rem;
   width: 100%;
   margin-bottom: 5%;
@@ -10443,7 +10444,7 @@ h2 {
   bottom: 2rem;
 }
 .master .master-ref p {
-  color: #e2ab1f;
+  color: #dfb13f;
   padding: 0.3rem;
   margin: 0;
   text-align: center;
@@ -10515,7 +10516,7 @@ h2 {
   color: white;
 }
 .master .team-item-left .grey-container .summary p span {
-  color: #e2ab1f;
+  color: #dfb13f;
   font-size: larger;
   padding-right: 0.2rem;
 }
@@ -10527,7 +10528,7 @@ h2 {
   margin: 0;
 }
 .master .team-item-left .summary-no-mobile p span {
-  color: #e2ab1f;
+  color: #dfb13f;
   font-size: larger;
   padding-right: 0.2rem;
 }
@@ -10558,7 +10559,7 @@ h2 {
   margin-bottom: 4rem;
 }
 .master-info p span {
-  color: #daa520;
+  color: #dfb13f;
   font-size: larger;
   padding-right: 0.2rem;
 }
@@ -10567,7 +10568,7 @@ h2 {
   text-align: center;
   width: 100%;
   margin: 5% 0;
-  color: #e2ab1f;
+  color: #dfb13f;
 }
 @media (min-width: 769px) {
   .master-varaus {
@@ -10612,7 +10613,7 @@ h2 {
   justify-content: center;
   margin: 2rem 0;
   padding: 0 0 0 0;
-  color: #e2ab1f;
+  color: #dfb13f;
   width: 90%;
 }
 @media screen and (max-width: 1024px) and (orientation: landscape) {
@@ -10634,7 +10635,7 @@ h2 {
 }
 #mobile-menu .mobile-menu-content .mobile-navigation li a,
 #mobile-menu .mobile-menu-content .mobile-header-some li a {
-  color: #e2ab1f;
+  color: #dfb13f;
   text-decoration: none;
 }
 #mobile-menu .mobile-menu-content .mobile-navigation img,
@@ -10644,16 +10645,16 @@ h2 {
   padding-right: 2rem;
 }
 #mobile-menu .mobile-menu-content .mobile-navigation li {
-  border-bottom: 1px solid #e2ab1f;
+  border-bottom: 1px solid #dfb13f;
 }
 #mobile-menu .mobile-menu-content .mobile-header-some li:first-of-type {
-  border: 1px solid #e2ab1f;
+  border: 1px solid #dfb13f;
   padding: 0.2rem;
   text-align: center;
   max-width: 12rem;
 }
 #mobile-menu .close-cross {
-  color: #e2ab1f;
+  color: #dfb13f;
   position: absolute;
   top: 0;
   left: 1rem;
@@ -10664,7 +10665,7 @@ h2 {
 #mobile-menu .close-cross:focus {
   text-decoration: none;
   cursor: pointer;
-  color: #e2ab1f;
+  color: #dfb13f;
 }
 
 /* Front Page */
@@ -10765,7 +10766,7 @@ h2 {
 .hero .arrow-group .hero-button:link,
 .hero .arrow-group .hero-button:visited {
   display: inline-block;
-  background-color: #daa520;
+  background-color: #dfb13f;
   color: #0a0a0a;
   padding: 0.3rem 2.3rem;
   text-align: center;
@@ -10793,8 +10794,8 @@ h2 {
 }
 .hero .arrow-group .hero-button:hover {
   background-color: #0a0a0a;
-  color: #e2ab1f;
-  border-color: #e2ab1f;
+  color: #dfb13f;
+  border-color: #dfb13f;
 }
 .hero .arrow-group .ref {
   position: relative;
@@ -10808,7 +10809,7 @@ h2 {
   }
 }
 .hero .arrow-group .ref p {
-  color: #e2ab1f;
+  color: #dfb13f;
   padding: 0.3rem;
   margin: 0;
   text-align: center;
@@ -10849,7 +10850,7 @@ h2 {
 .story {
   display: flex;
   flex-direction: column;
-  color: #e2ab1f;
+  color: #dfb13f;
   padding: 30% 0;
   justify-content: space-around;
   letter-spacing: 0.1rem;
@@ -10986,13 +10987,12 @@ h2 {
 .master-varaus {
   text-align: center;
   width: 100%;
-  margin: 0;
-  color: #e2ab1f;
+  margin: 5rem auto;
+  color: #dfb13f;
 }
 @media (min-width: 425px) {
   .master-varaus {
     width: 80%;
-    margin: 0 auto;
   }
 }
 .master-varaus .iframe-container {
@@ -11022,7 +11022,7 @@ h2 {
   background-color: white;
   color: #3d3d3d;
   width: 90%;
-  border: 2px solid transparent;
+  border: 2px solid #3d3d3d;
   padding: 3px;
   margin: 0.5rem;
   border-radius: 2px;
@@ -11052,8 +11052,11 @@ h2 {
 .wpcf7 textarea:hover,
 .wpcf7 textarea:visited,
 .wpcf7 textarea:focus {
-  border: 2px solid #e2ab1f;
+  border: 2px solid #dfb13f;
   outline: none;
+}
+.wpcf7 textarea {
+  line-height: 1rem;
 }
 .wpcf7 button,
 .wpcf7 input[type=button],
@@ -11062,7 +11065,7 @@ h2 {
   display: block;
   margin: 0 auto;
   border: 2px solid;
-  background: #e2ab1f;
+  background: #dfb13f;
   color: #0a0a0a;
   padding: 0.5rem 3rem;
   outline: none;
@@ -11075,8 +11078,8 @@ h2 {
 .wpcf7 input[type=submit]:hover,
 .wpcf7 input[type=submit]:visited {
   background-color: #0a0a0a;
-  color: #e2ab1f;
-  border-color: #e2ab1f;
+  color: #dfb13f;
+  border-color: #dfb13f;
   outline: none;
 }
 

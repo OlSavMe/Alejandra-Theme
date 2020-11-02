@@ -11,21 +11,64 @@
         ?>
 
 
-        <ul class="some">
-            <li><img src="<?php echo get_template_directory_uri() . '/images/fb-icon.png'; ?>" alt="fb-icon" /></li>
-            <li><img src="<?php echo get_template_directory_uri() . '/images/inst-icon.png'; ?>" alt="insta-icon" />
-            </li>
-        </ul>
 
+        <?php 
+// Iterating though the Masters posts
+$args = array(  
+    'post_type' => 'some', // name of the post type
+    'post_status' => 'publish',
+    'posts_per_page' => 1, // only one post is required
+    'order' => 'ASC', // earliest on top
+);
+
+$the_query = new WP_Query( $args ); ?>
+
+        <ul class="some">
+            <?php if ( $the_query->have_posts() ) : ?>
+            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <?php $fb = get_field('facebook_url');?>
+            <?php $insta = get_field('instagram_url');?>
+
+            <li><a href="<?php echo $fb['url']?>" target="_blank" rel="noopener noreferrer">
+                    <img src=" <?php echo get_template_directory_uri() . '/images/fb-icon.png'; ?>" alt="fb-icon" /></a>
+            </li>
+
+            <li><a href="<?php echo $insta['url']?>" target="_blank" rel="noopener noreferrer">
+                    <img src=" <?php echo get_template_directory_uri() . '/images/inst-icon.png'; ?>"
+                        alt="insta-icon" /></a></li>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+
+            <?php else : ?>
+            <p></p>
+            <?php endif; ?>
+
+        </ul>
     </div>
+
+
 
     <div class="footer-right">
         <ul>
+
             <li><img src="<?php echo get_template_directory_uri() . '/images/footer-logo.png'; ?>" alt="small-logo" />
             </li>
             <li>Alejandra Kauneussalonki</li>
             <li>Välimerenkatu 5, Helsinki</li>
-            <li>040 178 2801</li>
+            <?php if ( $the_query->have_posts() ) : ?>
+            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <?php $fullnumber = get_field('phone_number');?>
+            <?php $shortnumber = get_field('phone_without_prefix');?>
+            <li>
+                <a href="tel:+<?php echo $fullnumber;?>">
+                    <?php echo $shortnumber;?></a>
+            </li>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+            <?php else : ?>
+            <p></p>
+            <?php endif; ?>
+
             <li><a href="#">www.alejandra.fi</a></li>
         </ul>
         <ul>

@@ -55,11 +55,10 @@ h2 {
 .master-varaus {
   text-align: center;
   width: 100%;
-  margin: 0;
+  margin: 5rem auto;
   color: $gold;
   @include min-media(mobile) {
     width: 80%;
-    margin: 0 auto;
   }
 
   .iframe-container {

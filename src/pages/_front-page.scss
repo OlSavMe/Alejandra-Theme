@@ -83,8 +83,8 @@ h2 {
     .hero-button:link,
     .hero-button:visited {
       display: inline-block;
-      background-color: #daa520;
-      color: #0a0a0a;
+      background-color: $gold;
+      color: $dark;
       padding: 0.3rem 2.3rem;
       text-align: center;
       text-decoration: none;
@@ -106,7 +106,7 @@ h2 {
       }
     }
     .hero-button:hover {
-      background-color: #0a0a0a;
+      background-color: $dark;
       color: $gold;
       border-color: $gold;
     }
