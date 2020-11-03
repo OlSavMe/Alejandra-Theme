@@ -34,6 +34,7 @@ $the_query = new WP_Query( $args ); ?>
     <?php $photo = get_field('photo');?>
     <img src="<?php echo $photo['url'];?>" alt="<?php the_title();?>"
         onClick="openLightbox();toSlide(<?php echo $counter; ?>)" />
+
     <?php endwhile; ?>
     <?php wp_reset_postdata(); ?>
 
