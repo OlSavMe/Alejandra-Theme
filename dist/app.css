@@ -10265,6 +10265,8 @@ h2 {
   height: 160px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   transition: 500ms all ease-in-out;
   cursor: pointer;
 }
@@ -10289,22 +10291,27 @@ h2 {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
   background-color: rgba(41, 41, 41, 0.8);
 }
 .lightbox .lightbox-content {
   position: relative;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  margin: auto;
+  margin: 2rem auto 0;
   padding: 0 0 0 0;
   width: 80%;
+  overflow-y: scroll;
 }
 @media (min-width: 769px) {
   .lightbox .lightbox-content {
-    width: 60%;
+    width: 70%;
+    margin: 1rem auto 0;
+  }
+}
+@media (min-width: 1024px) {
+  .lightbox .lightbox-content {
     max-width: 1200px;
+    margin: 0 auto;
   }
 }
 .lightbox .lightbox-content .slide {
@@ -10318,27 +10325,47 @@ h2 {
   }
 }
 .lightbox .lightbox-content .slide .image-slide {
+  display: block;
   width: 100%;
   height: auto;
 }
 @media (min-width: 1024px) {
   .lightbox .lightbox-content .slide .image-slide {
-    width: 70%;
+    width: 60%;
   }
 }
 .lightbox .lightbox-content .slide .slide-comments {
+  position: relative;
   background-color: white;
   border-left: 0.5px solid #cccccc;
-  min-height: 9rem;
   color: black;
   font-size: 1rem;
-  padding: 1rem;
+  padding-top: 1rem;
 }
 @media (min-width: 1024px) {
   .lightbox .lightbox-content .slide .slide-comments {
-    min-width: 18rem;
-    max-width: 18rem;
+    width: 40%;
   }
+}
+.lightbox .lightbox-content .slide .slide-comments .comments {
+  padding: 0.5rem;
+}
+@media (min-width: 1024px) {
+  .lightbox .lightbox-content .slide .slide-comments .comments {
+    padding: 1.5rem;
+    height: calc(100% - 32px);
+    overflow-y: scroll;
+    position: absolute;
+    width: calc(100% - 5px);
+  }
+}
+.lightbox .lightbox-content .slide .slide-comments .comments::-webkit-scrollbar {
+  width: 5px !important;
+  background: white;
+}
+.lightbox .lightbox-content .slide .slide-comments .comments::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #cccccc;
 }
 .lightbox .close {
   color: white;
@@ -10347,6 +10374,7 @@ h2 {
   right: 25px;
   font-size: 35px;
   font-weight: bold;
+  z-index: 99;
 }
 .lightbox .close:hover,
 .lightbox .close:focus {

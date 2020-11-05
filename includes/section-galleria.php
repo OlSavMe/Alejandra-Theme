@@ -56,7 +56,9 @@ $the_query = new WP_Query( $args ); ?>
         <div class="slide">
             <img src="<?php echo $photo['url'];?>" alt="<?php the_title();?>" class="image-slide" />
             <section class="slide-comments">
-                <?php echo $comments;?>
+                <div class="comments">
+                    <?php echo $comments;?>
+                </div>
             </section>
         </div>
         <?php endwhile; ?>
