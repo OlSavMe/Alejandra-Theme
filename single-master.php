@@ -38,18 +38,12 @@
         <?php echo $masterprofile['about'];?>
     </p>
     <?php endif; ?>
-    <?php if ($masterprofile['products']):?>
-    <h2>TUOTTEET</h2>
-    <p>
-        <?php echo $masterprofile['products'];?>
-    </p>
-    <?php endif; ?>
-    <?php if ($masterprofile['service_description']):?>
-    <h2>PALVELUT</h2>
-    <p>
-        <?php echo $masterprofile['service_description'];?>
-    </p>
-    <?php endif; ?>
+
+
+    <?php get_template_part('includes/section', 'products');?>
+    <?php get_template_part('includes/section', 'services');?>
+
+
     <h2>GALLERIA</h2>
     <?php get_template_part('includes/section', 'galleria');?>
 </section>

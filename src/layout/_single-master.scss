@@ -172,17 +172,26 @@ h2 {
 
   p {
     color: white;
-    margin-bottom: 4rem;
-    span {
-      color: $gold;
-      font-size: larger;
-      padding-right: 0.2rem;
-    }
+    margin-bottom: 2rem;
   }
 
-  // h2 {
-  //   color: #daa520;
-  // }
+  .heading {
+    width: 100%;
+    justify-self: left;
+    color: $gold;
+    font-size: 1.6rem;
+    letter-spacing: 0.1vw;
+    padding: 3% 0;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  span {
+    color: $gold;
+    padding-right: 0.2rem;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+  }
 }
 
 .master-varaus {

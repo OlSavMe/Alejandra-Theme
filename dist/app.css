@@ -10597,12 +10597,23 @@ h2 {
 }
 .master-info p {
   color: white;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
-.master-info p span {
+.master-info .heading {
+  width: 100%;
+  justify-self: left;
   color: #dfb13f;
-  font-size: larger;
+  font-size: 1.6rem;
+  letter-spacing: 0.1vw;
+  padding: 3% 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+.master-info span {
+  color: #dfb13f;
   padding-right: 0.2rem;
+  text-transform: uppercase;
+  font-size: 1.1rem;
 }
 
 .master-varaus {
@@ -11052,6 +11063,7 @@ h2 {
 .wpcf7 {
   margin: 0;
   padding: 0;
+  margin-bottom: 8rem;
 }
 .wpcf7 .wpcf7-form-control-wrap {
   position: relative;

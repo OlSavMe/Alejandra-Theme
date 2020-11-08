@@ -13,7 +13,9 @@
 
 
         <?php 
-// Iterating though the Masters posts
+
+// Fetching Contact info
+
 $args = array(  
     'post_type' => 'some', // name of the post type
     'post_status' => 'publish',
