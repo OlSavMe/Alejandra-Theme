@@ -11069,17 +11069,17 @@ h2 {
   height: 100%;
 }
 
-.wpcf7 {
+div.wpcf7 {
   margin: 0;
   padding: 0;
   margin-bottom: 8rem;
 }
-.wpcf7 .wpcf7-form-control-wrap {
+div.wpcf7 .wpcf7-form-control-wrap {
   position: relative;
 }
-.wpcf7 input[type=text],
-.wpcf7 input[type=email],
-.wpcf7 textarea {
+div.wpcf7 input[type=text],
+div.wpcf7 input[type=email],
+div.wpcf7 textarea {
   position: relative;
   background-color: white;
   color: #3d3d3d;
@@ -11092,38 +11092,38 @@ h2 {
   outline: none;
 }
 @media (min-width: 425px) {
-  .wpcf7 input[type=text],
-.wpcf7 input[type=email],
-.wpcf7 textarea {
+  div.wpcf7 input[type=text],
+div.wpcf7 input[type=email],
+div.wpcf7 textarea {
     min-width: 20rem;
     width: 100%;
   }
 }
 @media (min-width: 769px) {
-  .wpcf7 input[type=text],
-.wpcf7 input[type=email],
-.wpcf7 textarea {
+  div.wpcf7 input[type=text],
+div.wpcf7 input[type=email],
+div.wpcf7 textarea {
     min-width: 40rem;
     width: 100%;
   }
 }
-.wpcf7 input[type=text]:hover, .wpcf7 input[type=text]:visited, .wpcf7 input[type=text]:focus,
-.wpcf7 input[type=email]:hover,
-.wpcf7 input[type=email]:visited,
-.wpcf7 input[type=email]:focus,
-.wpcf7 textarea:hover,
-.wpcf7 textarea:visited,
-.wpcf7 textarea:focus {
+div.wpcf7 input[type=text]:hover, div.wpcf7 input[type=text]:visited, div.wpcf7 input[type=text]:focus,
+div.wpcf7 input[type=email]:hover,
+div.wpcf7 input[type=email]:visited,
+div.wpcf7 input[type=email]:focus,
+div.wpcf7 textarea:hover,
+div.wpcf7 textarea:visited,
+div.wpcf7 textarea:focus {
   border: 2px solid #dfb13f;
   outline: none;
 }
-.wpcf7 textarea {
+div.wpcf7 textarea {
   line-height: 1rem;
 }
-.wpcf7 button,
-.wpcf7 input[type=button],
-.wpcf7 input[type=reset],
-.wpcf7 input[type=submit] {
+div.wpcf7 button,
+div.wpcf7 input[type=button],
+div.wpcf7 input[type=reset],
+div.wpcf7 input[type=submit] {
   display: block;
   margin: 0 auto;
   border: 2px solid;
@@ -11132,13 +11132,13 @@ h2 {
   padding: 0.5rem 3rem;
   outline: none;
 }
-.wpcf7 button:hover, .wpcf7 button:visited,
-.wpcf7 input[type=button]:hover,
-.wpcf7 input[type=button]:visited,
-.wpcf7 input[type=reset]:hover,
-.wpcf7 input[type=reset]:visited,
-.wpcf7 input[type=submit]:hover,
-.wpcf7 input[type=submit]:visited {
+div.wpcf7 button:hover, div.wpcf7 button:visited,
+div.wpcf7 input[type=button]:hover,
+div.wpcf7 input[type=button]:visited,
+div.wpcf7 input[type=reset]:hover,
+div.wpcf7 input[type=reset]:visited,
+div.wpcf7 input[type=submit]:hover,
+div.wpcf7 input[type=submit]:visited {
   background-color: #0a0a0a;
   color: #dfb13f;
   border-color: #dfb13f;

@@ -49,5 +49,5 @@ $the_query = new WP_Query( $args ); ?>
 <?php wp_reset_postdata(); ?>
 
 <?php else : ?>
-<p>no posts</p>
+<p></p>
 <?php endif; ?>

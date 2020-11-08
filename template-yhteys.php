@@ -7,18 +7,6 @@ Template Name: Yhteys
 
 <?php  get_header();?>
 
-<?php 
-
-// Fetching Map Post
-
-$args = array(  
-    'post_type' => 'map', // name of the post type
-    'post_status' => 'publish',
-    'posts_per_page' => 1, // only one post is required
-    'order' => 'DESC', // earliest on top
-);
-
-$the_query = new WP_Query( $args ); ?>
 
 
 <div class="master">
@@ -34,15 +22,53 @@ $the_query = new WP_Query( $args ); ?>
     <?php  the_content();?>
     <?php  endwhile; endif;?>
 
+    <?php 
+    // Fetching Contact info
 
-    <p>Palvelemme teitä osoitteessa: Välimerenkatu 5, Helsinki</p>
+$args = array(  
+    'post_type' => 'some', // name of the post type
+    'post_status' => 'publish',
+    'posts_per_page' => 1, // only one post is required
+    'order' => 'ASC', // earliest on top
+);
+
+$the_query = new WP_Query( $args ); ?>
+
+
     <?php if ( $the_query->have_posts() ) : ?>
     <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+    <?php $address = get_field('address');?>
+
+
+    <?php endwhile; ?>
+    <?php wp_reset_postdata(); ?>
+
+    <?php else : ?>
+    <p></p>
+    <?php endif; ?>
+
+
+    <p>Palvelemme teitä osoitteessa: <?php echo $address?></p>
+
+    <?php 
+
+// Fetching Map Post
+
+$args = array(  
+    'post_type' => 'map', // name of the post type
+    'post_status' => 'publish',
+    'posts_per_page' => 1, // only one post is required
+    'order' => 'DESC', // earliest on top
+);
+
+$the_map_query = new WP_Query( $args ); ?>
+
+    <?php if ( $the_map_query ->have_posts() ) : ?>
+    <?php while ( $the_map_query ->have_posts() ) : $the_map_query ->the_post(); ?>
     <?php  the_content();?>
     <?php  endwhile; endif;?>
 
 </section>
 
 
-<?php get_footer();
-?>
+<?php get_footer();?>
