@@ -169,6 +169,16 @@ h2 {
   @include min-media(mobile) {
     width: 80%;
   }
+  .more {
+    display: none;
+  }
+
+  .show-more {
+    color: $gold;
+    width: 100%;
+    justify-self: left;
+    cursor: pointer;
+  }
 
   p {
     color: white;

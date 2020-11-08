@@ -10595,6 +10595,15 @@ h2 {
     width: 80%;
   }
 }
+.master-info .more {
+  display: none;
+}
+.master-info .show-more {
+  color: #dfb13f;
+  width: 100%;
+  justify-self: left;
+  cursor: pointer;
+}
 .master-info p {
   color: white;
   margin-bottom: 2rem;

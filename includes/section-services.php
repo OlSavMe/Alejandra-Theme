@@ -38,7 +38,12 @@ $the_query = new WP_Query( $args ); ?>
 <?php $more = get_field('service_read_more');?>
 <p class="heading"><?php echo $heading;?></p>
 <p><?php echo $main;?></p>
-<p id="more"><?php echo $more ;?></p>
+
+<p class="more"><?php echo $more ;?></p>
+
+<p class="show-more">
+    ...Lue lisää
+</p>
 
 <?php endwhile; ?>
 <?php wp_reset_postdata(); ?>

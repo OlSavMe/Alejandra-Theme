@@ -137,7 +137,7 @@ $the_query = new WP_Query( $args ); ?>
     }
 
 
-    jQuery(document).ready(function() {
+    jQuery(document).ready(function(e) {
         jQuery('ul.mobile-navigation').children().click(function() {
             jQuery
                 ('mobile-menu').animate({
@@ -148,7 +148,26 @@ $the_query = new WP_Query( $args ); ?>
         });
 
     });
+
+
+
+
+    jQuery(document).ready(function() {
+        jQuery(".show-more").click(function() {
+            jQuery(this).prev(".more").slideToggle();
+            jQuery(window).scrollTop(jQuery(".more").offset().top - 50);
+            jQuery(this).text(function(i, text) {
+                return text === "...Lue vähemmän" ? "...Lue lisää" : "...Lue vähemmän";
+            });
+
+        });
+
+    });
     </script>
+
+
+
+
 </footer>
 <?php wp_footer(); ?>
 </body>
