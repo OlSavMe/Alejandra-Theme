@@ -10,9 +10,6 @@ li {
   @include min-media(tablet) {
     font-size: 1.2rem;
   }
-  // @include min-media(laptop) {
-  //   font-size: 1.3rem;
-  // }
 }
 
 h1,

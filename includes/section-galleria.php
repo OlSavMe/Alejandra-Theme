@@ -43,7 +43,7 @@ $the_query = new WP_Query( $args ); ?>
     <?php endif; ?>
 </div>
 
-<div id="lightbox" class='lightbox'>
+<div id="lightbox" class='lightbox' onKeyDown="moveKeys()">
     <span class="close pointer" onClick="closeLightbox()">&times;</span>
     <div class="lightbox-content">
         <?php if ( $the_query->have_posts() ) : ?>
@@ -54,7 +54,7 @@ $the_query = new WP_Query( $args ); ?>
         <?php $photo = get_field('photo');?>
         <?php $comments = get_field('photo_comments');?>
         <?php $link = get_field('photo_link');?>
-        <div class="slide">
+        <div class="slide" onKeyDown="moveKeys()">
             <img src="<?php echo $photo['url'];?>" alt="<?php the_title();?>" class="image-slide" />
             <section class="slide-comments">
                 <div class="comments">

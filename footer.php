@@ -108,6 +108,16 @@ $the_query = new WP_Query( $args ); ?>
         showSlide(slideIndex = n);
     };
 
+    // for navigation with left and right keys
+    function moveKeys(e) {
+        // if (!e) e = window.event;
+        if (e.keyCode === 37) {
+            changeSlide(-1);
+        } else if (e.keyCode === 39) {
+            changeSlide(1);
+        }
+    };
+
     function showSlide(n) {
 
         const slides = document.getElementsByClassName('slide');
@@ -125,6 +135,7 @@ $the_query = new WP_Query( $args ); ?>
         };
         slides[slideIndex - 1].style.display = 'flex';
     };
+
 
     // mobile menu with jQuery
 

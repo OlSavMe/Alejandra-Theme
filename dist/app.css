@@ -10182,7 +10182,8 @@ a.master-card {
 }
 .master-card:nth-of-type(odd) .grey-container .varaa {
   color: #dfb13f;
-  padding: 10% 10% 0 40%;
+  padding: 10% 10% 0 30%;
+  letter-spacing: normal;
 }
 
 .master-card:nth-of-type(even) {
@@ -10235,6 +10236,7 @@ a.master-card {
 .master-card:nth-of-type(even) .grey-container .varaa {
   color: #dfb13f;
   padding: 10%;
+  letter-spacing: normal;
 }
 
 h2 {
@@ -10612,28 +10614,48 @@ h2 {
 }
 .master-info p {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0;
 }
 .master-info p a {
   color: #dfb13f !important;
   font-weight: bold;
 }
+@media (min-width: 425px) {
+  .master-info p {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 769px) {
+  .master-info p {
+    font-size: 1.2rem;
+  }
+}
 .master-info .heading {
   width: 100%;
   justify-self: left;
   color: #dfb13f;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   letter-spacing: 0.1vw;
   padding: 3% 0 0 0;
   margin: 0;
   text-transform: uppercase;
 }
+@media (min-width: 769px) {
+  .master-info .heading {
+    font-size: 1.5rem;
+  }
+}
 .master-info span {
   color: #dfb13f;
   padding-right: 0.2rem;
   text-transform: uppercase;
-  font-size: 1.1rem;
+  font-size: 1rem;
+}
+@media (min-width: 769px) {
+  .master-info span {
+    font-size: 1.1rem;
+  }
 }
 
 .master-varaus {
