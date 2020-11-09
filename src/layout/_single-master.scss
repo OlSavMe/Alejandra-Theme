@@ -8,9 +8,6 @@ li {
   @include min-media(tablet) {
     font-size: 1.2rem;
   }
-  @include min-media(laptop) {
-    font-size: 1.3rem;
-  }
 }
 
 h1,
@@ -169,6 +166,14 @@ h2 {
   @include min-media(mobile) {
     width: 80%;
   }
+
+  @include min-media(tablet) {
+    width: 65%;
+  }
+
+  h2 {
+    margin: 5% 0 0 0;
+  }
   .more {
     display: none;
   }
@@ -182,7 +187,12 @@ h2 {
 
   p {
     color: white;
-    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    margin: 0;
+    a {
+      color: $gold !important;
+      font-weight: bold;
+    }
   }
 
   .heading {
@@ -191,7 +201,7 @@ h2 {
     color: $gold;
     font-size: 1.6rem;
     letter-spacing: 0.1vw;
-    padding: 3% 0;
+    padding: 3% 0 0 0;
     margin: 0;
     text-transform: uppercase;
   }

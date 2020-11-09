@@ -4,7 +4,6 @@
 Servics fetched by master 
 */
 ?>
-<!-- <p><?php echo $name;?></p> -->
 
 <?php 
 // Iterating though the Photos posts
@@ -37,13 +36,19 @@ $the_query = new WP_Query( $args ); ?>
 <?php $main = get_field('service_main_text');?>
 <?php $more = get_field('service_read_more');?>
 <p class="heading"><?php echo $heading;?></p>
-<p><?php echo $main;?></p>
-
-<p class="more"><?php echo $more ;?></p>
-
-<p class="show-more">
-    ...Lue lisää
+<p><?php echo $main;?>
+    <?php if (!$more):?>
+    <a href="<?php echo $link;?>" target="_blank" rel="noopener noreferrer"><?php echo $link;?></a>
+    <?php endif; ?>
 </p>
+<?php if ($more):?>
+<p class="more"><?php echo $more;?>
+    <a href="<?php echo $link;?>" target="_blank" rel="noopener noreferrer"><?php echo $link;?></a>
+</p>
+<p class="show-more">
+    [...]Lue lisää
+</p>
+<?php endif; ?>
 
 <?php endwhile; ?>
 <?php wp_reset_postdata(); ?>

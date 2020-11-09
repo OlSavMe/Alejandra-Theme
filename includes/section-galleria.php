@@ -53,11 +53,14 @@ $the_query = new WP_Query( $args ); ?>
   ?>
         <?php $photo = get_field('photo');?>
         <?php $comments = get_field('photo_comments');?>
+        <?php $link = get_field('photo_link');?>
         <div class="slide">
             <img src="<?php echo $photo['url'];?>" alt="<?php the_title();?>" class="image-slide" />
             <section class="slide-comments">
                 <div class="comments">
                     <?php echo $comments;?>
+                    <a href="<?php echo $link['url'];?>" target="_blank"
+                        rel="noopener noreferrer"><?php echo $link['url'];?></a>
                 </div>
             </section>
         </div>

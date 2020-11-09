@@ -17,26 +17,40 @@
     <?php get_template_part('includes/section', 'masters');?>
 </section>
 
+<?php 
+// Iterating though the Masters posts
+$args = array(  
+    'post_type' => 'story', // name of the post type
+    'post_status' => 'publish',
+    'posts_per_page' => 1, // only one post is required
+    'order' => 'ASC', // earliest on top
+);
+
+$the_query = new WP_Query( $args ); ?>
+
+
+<?php if ( $the_query->have_posts() ) : ?>
+<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+<?php $story = get_field('story');?>
+<?php $photo = get_field('salon_photo');?>
+<?php $mobilephoto = get_field('mobile_photo');?>
+
 <section class="story">
     <h2>ALEJANDRA KAUNEAUSSALONKI</h2>
 
-    <p>Tavoitteemme on pitää kaikki asiakkaamme tyytyväisinä hyvällä palvelulla, mahtavilla eduilla ja herkullisilla
-        makuelämyksillä.
-        Tämä kokonaisuus on perustettu juuri sinua varten, tehdäksemme arjestasi helpomman ja nautinnollisemman.
-    </p>
-    <p>Aloitimme liiketoiminnan uuden Jätkäsaaren ensimmäisten yrittäjien joukossa ja samalla kun Jätkäsaari kehittyy,
-        me kehitymme sen mukana. Meille on tärkeää, että muokkaamme liiketoimintaamme tämän merellisen kaupunginosan
-        mukaisesti, viihtyisäksi kohtaamispaikaksi.
-        Huolehdi itsestäsi trendikkäillä kauneussalongin palveluilla, nauti samalla maukas kahvikakkusi ja tilaa kauniit
-        kukat rakkaallesi. Kaikki samasta paikasta.
-    </p>
-    <p>Tule kokemaan lämmin tunnelmamme suoraan Jätkäsaaren sydämeen!</p>
+
+    <?php echo $story?>
+
+
     <div class="photo-container">
-        <img class='mobile-pic' src="<?php echo get_template_directory_uri() . '/images/salon.png'; ?>"
-            alt="salon-mobile" />
-        <img class='desktop-pic' src="<?php echo get_template_directory_uri() . '/images/salon-screen.png'; ?>"
-            alt="salon" />
+        <img class='mobile-pic' src="<?php echo $mobilephoto['url']?>" alt="salon-mobile" />
+        <img class='desktop-pic' src="<?php echo $photo['url']?>" alt="salon" />
     </div>
 </section>
+<?php endwhile; ?>
+<?php wp_reset_postdata(); ?>
+<?php else : ?>
+<p></p>
+<?php endif; ?>
 
 <?php get_footer();?>

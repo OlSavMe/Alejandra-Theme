@@ -20,7 +20,7 @@ $the_query = new WP_Query( $args ); ?>
     <h1 class="card-heading"><?php echo $mastercard['master_name'];?></h1>
     <div class="grey-container">
         <p><?php echo $mastercard['master_services'];?></p>
-        <p class="varaa">Varaa aika &rsaquo;</p>
+        <p class="varaa">Tutustu & Varaa &rsaquo;</p>
     </div>
 </a>
 

@@ -154,11 +154,11 @@ $the_query = new WP_Query( $args ); ?>
 
     jQuery(document).ready(function() {
         jQuery(".show-more").click(function() {
-            jQuery(this).prev(".more").slideToggle();
-            jQuery(window).scrollTop(jQuery(".more").offset().top - 50);
+            jQuery(this).prev(".more").slideToggle(1000);
+            // jQuery(window).scrollTop(jQuery(".more").offset().top - 50);
             jQuery(this).text(function(i, text) {
-                return text === "...Lue vähemmän" ? "...Lue lisää" : "...Lue vähemmän";
-            });
+                return text === "Lue vähemmän" ? "  [...]Lue lisää" : "Lue vähemmän";
+            }, 500);
 
         });
 

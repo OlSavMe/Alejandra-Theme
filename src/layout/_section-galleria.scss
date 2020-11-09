@@ -103,6 +103,10 @@ h2 {
             position: absolute;
             width: calc(100% - 5px);
           }
+          a {
+            color: black;
+            font-weight: bold;
+          }
         }
         .comments::-webkit-scrollbar {
           width: 5px !important;

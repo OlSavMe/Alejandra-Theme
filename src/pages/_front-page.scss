@@ -10,15 +10,16 @@ li {
   @include min-media(tablet) {
     font-size: 1.2rem;
   }
-  @include min-media(laptop) {
-    font-size: 1.3rem;
-  }
+  // @include min-media(laptop) {
+  //   font-size: 1.3rem;
+  // }
 }
 
 h1,
 h2 {
   font-size: 1.7rem;
   letter-spacing: 1vw;
+  text-indent: 1vw;
   @include min-media(mobile) {
     font-size: 1.9rem;
   }
@@ -180,7 +181,7 @@ h2 {
   }
 
   @include min-media(laptop) {
-    padding: 7%;
+    padding: 5% 15%;
   }
 
   h2 {
@@ -196,6 +197,7 @@ h2 {
 
   p {
     margin: 0.5rem;
+    color: white;
     text-align: left;
 
     @include min-media(mobile) {

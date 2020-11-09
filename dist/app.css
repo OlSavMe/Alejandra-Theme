@@ -10359,6 +10359,10 @@ h2 {
     width: calc(100% - 5px);
   }
 }
+.lightbox .lightbox-content .slide .slide-comments .comments a {
+  color: black;
+  font-weight: bold;
+}
 .lightbox .lightbox-content .slide .slide-comments .comments::-webkit-scrollbar {
   width: 5px !important;
   background: white;
@@ -10422,12 +10426,6 @@ li {
   p,
 li {
     font-size: 1.2rem;
-  }
-}
-@media (min-width: 1024px) {
-  p,
-li {
-    font-size: 1.3rem;
   }
 }
 
@@ -10595,6 +10593,14 @@ h2 {
     width: 80%;
   }
 }
+@media (min-width: 769px) {
+  .master-info {
+    width: 65%;
+  }
+}
+.master-info h2 {
+  margin: 5% 0 0 0;
+}
 .master-info .more {
   display: none;
 }
@@ -10606,7 +10612,12 @@ h2 {
 }
 .master-info p {
   color: white;
-  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  margin: 0;
+}
+.master-info p a {
+  color: #dfb13f !important;
+  font-weight: bold;
 }
 .master-info .heading {
   width: 100%;
@@ -10614,7 +10625,7 @@ h2 {
   color: #dfb13f;
   font-size: 1.6rem;
   letter-spacing: 0.1vw;
-  padding: 3% 0;
+  padding: 3% 0 0 0;
   margin: 0;
   text-transform: uppercase;
 }
@@ -10747,17 +10758,12 @@ li {
     font-size: 1.2rem;
   }
 }
-@media (min-width: 1024px) {
-  p,
-li {
-    font-size: 1.3rem;
-  }
-}
 
 h1,
 h2 {
   font-size: 1.7rem;
   letter-spacing: 1vw;
+  text-indent: 1vw;
 }
 @media (min-width: 425px) {
   h1,
@@ -10928,7 +10934,7 @@ h2 {
 }
 @media (min-width: 1024px) {
   .story {
-    padding: 7%;
+    padding: 5% 15%;
   }
 }
 .story h2 {
@@ -10944,6 +10950,7 @@ h2 {
 }
 .story p {
   margin: 0.5rem;
+  color: white;
   text-align: left;
 }
 @media (min-width: 425px) {
@@ -10992,12 +10999,6 @@ li {
   p,
 li {
     font-size: 1.2rem;
-  }
-}
-@media (min-width: 1024px) {
-  p,
-li {
-    font-size: 1.3rem;
   }
 }
 
