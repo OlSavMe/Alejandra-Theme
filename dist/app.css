@@ -10693,6 +10693,11 @@ h2 {
   background-color: #0a0a0a;
   padding: 0;
 }
+@media (min-width: 1024px) {
+  #mobile-menu {
+    display: none;
+  }
+}
 #mobile-menu .mobile-menu-content {
   position: relative;
   display: flex;
@@ -10756,11 +10761,11 @@ h2 {
 }
 
 @media (min-width: 1024px) {
-  a {
+  a.float-button {
     display: none;
   }
 }
-a .floating-button {
+a.float-button .floating-button {
   border-radius: 50%;
   background: #dfb13f;
   box-shadow: 0px 5px 10px 5px #dfb13f;
@@ -10774,7 +10779,7 @@ a .floating-button {
   cursor: pointer;
   justify-content: center;
 }
-a .floating-button p {
+a.float-button .floating-button p {
   color: black;
   text-align: center;
   z-index: 100;

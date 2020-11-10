@@ -1,4 +1,7 @@
 #mobile-menu {
+  @include min-media(laptop) {
+    display: none;
+  }
   display: flex;
   position: fixed;
   flex-direction: column;
