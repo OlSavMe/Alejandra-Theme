@@ -20,7 +20,7 @@ $the_query = new WP_Query( $args ); ?>
 <?php $fullnumber = get_field('phone_number');?>
 
 
-<a lass="float-button" href="tel:+<?php echo $fullnumber;?>">
+<a class="float-button" href="tel:+<?php echo $fullnumber;?>">
     <div class="floating-button">
         <p>&#x2706;</p>
     </div>

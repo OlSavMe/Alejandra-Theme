@@ -61,6 +61,5 @@
         veloitamme 100% palvelun hinnasta.
     </p>
 </section>
-<?php get_template_part('includes/section', 'floating-button');?>
 <?php get_footer();
 ?>
