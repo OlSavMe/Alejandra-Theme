@@ -10179,6 +10179,7 @@ a.master-card {
   margin: 0;
   color: white;
   padding: 5% 0 0 30%;
+  letter-spacing: 0.2rem;
 }
 .master-card:nth-of-type(odd) .grey-container .varaa {
   color: #dfb13f;
@@ -10232,6 +10233,7 @@ a.master-card {
   margin: 0;
   color: white;
   padding: 5% 25% 0 3%;
+  letter-spacing: 0.2rem;
 }
 .master-card:nth-of-type(even) .grey-container .varaa {
   color: #dfb13f;
@@ -10324,6 +10326,7 @@ h2 {
 @media (min-width: 1024px) {
   .lightbox .lightbox-content .slide {
     flex-direction: row;
+    align-items: auto;
   }
 }
 .lightbox .lightbox-content .slide .image-slide {
@@ -10334,6 +10337,7 @@ h2 {
 @media (min-width: 1024px) {
   .lightbox .lightbox-content .slide .image-slide {
     width: 60%;
+    height: auto;
   }
 }
 .lightbox .lightbox-content .slide .slide-comments {
@@ -10614,22 +10618,11 @@ h2 {
 }
 .master-info p {
   color: white;
-  font-size: 1rem;
   margin: 0;
 }
 .master-info p a {
   color: #dfb13f !important;
   font-weight: bold;
-}
-@media (min-width: 425px) {
-  .master-info p {
-    font-size: 1.1rem;
-  }
-}
-@media (min-width: 769px) {
-  .master-info p {
-    font-size: 1.2rem;
-  }
 }
 .master-info .heading {
   width: 100%;
@@ -10765,13 +10758,12 @@ h2 {
 /* Front Page */
 p,
 li {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 @media (min-width: 425px) {
   p,
 li {
     font-size: 1.1rem;
-    letter-spacing: 0.2rem;
   }
 }
 @media (min-width: 769px) {
@@ -11014,8 +11006,13 @@ h2 {
 /* Master Ajanvaraus */
 p,
 li {
-  font-size: 1.1rem;
-  letter-spacing: 0.1rem;
+  font-size: 1rem;
+}
+@media (min-width: 425px) {
+  p,
+li {
+    font-size: 1.1rem;
+  }
 }
 @media (min-width: 769px) {
   p,

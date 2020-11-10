@@ -72,6 +72,7 @@ h2 {
 
       @include min-media(laptop) {
         flex-direction: row;
+        align-items: auto;
       }
 
       .image-slide {
@@ -80,6 +81,7 @@ h2 {
         height: auto;
         @include min-media(laptop) {
           width: 60%;
+          height: auto;
         }
       }
 

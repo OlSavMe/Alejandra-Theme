@@ -187,17 +187,10 @@ h2 {
 
   p {
     color: white;
-    font-size: 1rem;
     margin: 0;
     a {
       color: $gold !important;
       font-weight: bold;
-    }
-    @include min-media(mobile) {
-      font-size: 1.1rem;
-    }
-    @include min-media(tablet) {
-      font-size: 1.2rem;
     }
   }
 
