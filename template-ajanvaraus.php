@@ -15,9 +15,11 @@ Template Name: Ajanvaraus
 
 <section class="master-varaus" id="master-varaus">
     <h2>AJANVARAUS</h2>
+    <!-- <a href="https://phorest.com/book/salons/centrumalejandra#/">
+        <p>Koko näyttö &rsaquo;</p>
+    </a> -->
     <div class="iframe-container">
-        <iframe src="https://phorest.com/book/salons/centrumalejandra#/" width="900" height="800"
-            frameborder="0"></iframe>
+        <iframe src="http://centrumalejandra.phorest.me/book" width="900" height="auto" frameborder="0"></iframe>
     </div>
     <p>
         Peruutusten tulee tapahtua 24 tuntia aikaisemmin, peruuttamattomista ajoista
@@ -25,6 +27,6 @@ Template Name: Ajanvaraus
     </p>
 </section>
 
-
+<?php get_template_part('includes/section', 'floating-button');?>
 <?php get_footer();
 ?>

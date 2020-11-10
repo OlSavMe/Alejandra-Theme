@@ -50,15 +50,17 @@
 
 <section class="master-varaus" id="master-varaus">
     <h2>AJANVARAUS</h2>
+    <!-- <a href="<?php echo $masterprofile['booking_link']['url'];?>">
+        <p>Koko näyttö &rsaquo;</p>
+    </a> -->
     <div class="iframe-container">
-        <iframe src=" <?php echo $masterprofile['booking_link']['url'];?>" width="900" height="800"
-            frameborder="0"></iframe>
+        <iframe src=" <?php echo $masterprofile['booking_link']['url'];?>" frameborder="0"></iframe>
     </div>
     <p>
         Peruutusten tulee tapahtua 24 tuntia aikaisemmin, peruuttamattomista ajoista
         veloitamme 100% palvelun hinnasta.
     </p>
 </section>
-
+<?php get_template_part('includes/section', 'floating-button');?>
 <?php get_footer();
 ?>

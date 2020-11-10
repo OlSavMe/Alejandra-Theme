@@ -70,5 +70,5 @@ $the_map_query = new WP_Query( $args ); ?>
 
 </section>
 
-
+<?php get_template_part('includes/section', 'floating-button');?>
 <?php get_footer();?>

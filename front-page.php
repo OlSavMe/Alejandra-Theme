@@ -52,5 +52,5 @@ $the_query = new WP_Query( $args ); ?>
 <?php else : ?>
 <p></p>
 <?php endif; ?>
-
+<?php get_template_part('includes/section', 'floating-button');?>
 <?php get_footer();?>

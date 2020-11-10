@@ -18,6 +18,6 @@ Template Name: Galleria
     <?php get_template_part('includes/section', 'galleria');?>
 </section>
 
-
+<?php get_template_part('includes/section', 'floating-button');?>
 <?php get_footer();
 ?>
