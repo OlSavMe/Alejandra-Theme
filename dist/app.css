@@ -10628,9 +10628,9 @@ h2 {
   width: 100%;
   justify-self: left;
   color: #dfb13f;
-  font-size: 1.2rem;
+  font-size: 1rem !important;
   letter-spacing: 0.1vw;
-  padding: 3% 0 0 0;
+  padding: 3% 0;
   margin: 0;
   text-transform: uppercase;
 }
@@ -10643,7 +10643,7 @@ h2 {
   color: #dfb13f;
   padding-right: 0.2rem;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 @media (min-width: 769px) {
   .master-info span {
