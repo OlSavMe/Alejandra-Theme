@@ -37,6 +37,8 @@ $the_query = new WP_Query( $args ); ?>
 <?php $main = get_field('service_main_text');?>
 <?php $more = get_field('service_read_more');?>
 <?php $link = get_field('link');?>
+
+
 <p class="heading"><?php echo $heading;?></p>
 
 <p><?php echo $main;?>

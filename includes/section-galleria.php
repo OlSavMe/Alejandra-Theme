@@ -23,21 +23,19 @@ $args = array(
     ), 
 );
 
-
 $the_query = new WP_Query( $args ); ?>
-
     <?php if ( $the_query->have_posts() ) : ?>
     <?php 
   $counter = 0;
   while ( $the_query->have_posts() ) : $the_query->the_post(); $counter++ 
   ?>
     <?php $photo = get_field('photo');?>
-    <img src="<?php echo $photo['url'];?>" alt="<?php the_title();?>"
+    <?php if ($photo):?>
+        <img src="<?php echo esc_url($photo['url']);?>" alt="<?php the_title();?>"
         onClick="openLightbox();toSlide(<?php echo $counter; ?>)" />
-
+    <?php endif; ?>
     <?php endwhile; ?>
     <?php wp_reset_postdata(); ?>
-
     <?php else : ?>
     <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
     <?php endif; ?>
@@ -55,12 +53,12 @@ $the_query = new WP_Query( $args ); ?>
         <?php $comments = get_field('photo_comments');?>
         <?php $link = get_field('photo_link');?>
         <div class="slide" onKeyDown="moveKeys()">
-            <img src="<?php echo $photo['url'];?>" alt="<?php the_title();?>" class="image-slide" />
+            <img src="<?php echo esc_url($photo['url']);?>" alt="<?php the_title();?>" class="image-slide" />
             <section class="slide-comments">
                 <div class="comments">
                     <?php echo $comments;?>
-                    <a href="<?php echo $link['url'];?>" target="_blank"
-                        rel="noopener noreferrer"><?php echo $link['url'];?></a>
+                    <a href="<?php echo esc_url($link['url']);?>" target="_blank"
+                        rel="noopener noreferrer"><?php echo esc_url($link['url']);?></a>
                 </div>
             </section>
         </div>

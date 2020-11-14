@@ -47,13 +47,25 @@ function master_post_type() {
         'labels'=> array (
             'name' => 'Masters', // label shown in admin menu
             'singular_name' => 'master', // name for one object of the post type
+         
         ),
         'hierarchical' => true,
         'public' => true, // visible both in the admin panel and front end
         'has_archive' => true, // enables archiving of the custom posts
         'menu_icon'   => 'dashicons-universal-access-alt', // post type icon in admin menu 
         'rewrite' => array('slug' => 'masters','with_front' => false),
-        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'), // features supported by the post type
+        'supports' => array(
+            'title',
+            'editor',
+            'author',
+            'thumbnail',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'page-attributes',
+            'post-formats',
+            'custom-fields',),// features supported by the post type
         'show_in_rest' => true, // for API endpoint
     );
 
@@ -72,12 +84,24 @@ function photo_post_type() {
         'labels'=> array (
             'name' => 'Photos', // label shown in admin menu
             'singular_name' => 'photo', // name for one object of the post type
+           
         ),
         'public' => true, // visible both in the admin panel and front end
         'has_archive' => true, // enables archiving of the custom posts
         'menu_icon'   => 'dashicons-format-gallery', // post type icon in admin menu 
         'rewrite' => array('slug' => 'photos','with_front' => false),
-        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'), // features supported by the post type
+        'supports' => array(
+            'title',
+            'editor',
+            'author',
+            'thumbnail',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'page-attributes',
+            'post-formats',
+            'custom-fields'),// features supported by the post type
         'show_in_rest' => true, // for API endpoint
     );
 
@@ -87,6 +111,27 @@ function photo_post_type() {
 
 add_action('init', 'photo_post_type'); // fires after loadng is completed but before any headers sent
 
+// adding thumbnails to the admin post list
+
+if (function_exists('add_theme_support')) {
+    add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 100, 100, true ); // default thumbnail size
+    add_image_size('my-custom-thumb', 120, 120, true); //custom size
+    }
+
+add_filter('manage_posts_columns', 'posts_columns', 5);
+add_action('manage_posts_custom_column', 'posts_custom_columns', 5, 2);
+ 
+function posts_columns($defaults){
+    $defaults['riv_post_thumbs'] = __('Pic');
+    return $defaults;
+}
+ 
+function posts_custom_columns($column_name, $id){
+    if($column_name === 'riv_post_thumbs'){
+        echo the_post_thumbnail();
+    }
+}
 
 
 // Adding custom taxonomies
@@ -147,6 +192,7 @@ function some_post_type() {
 
 add_action('init', 'some_post_type');
 
+
 // Customs posts for Our Story section
 
 
@@ -182,6 +228,7 @@ function map_post_type() {
         'labels'=> array (
             'name' => 'Map', // label shown in admin menu
             'singular_name' => 'map', // name for one object of the post type
+            
         ),
         'public' => true, // visible both in the admin panel and front end
         'has_archive' => true, // enables archiving of the custom posts
@@ -209,12 +256,24 @@ function service_post_type() {
         'labels'=> array (
             'name' => 'Services and Products', // label shown in admin menu
             'singular_name' => 'service', // name for one object of the post type
+            
         ),
         'public' => true, // visible both in the admin panel and front end
         'has_archive' => true, // enables archiving of the custom posts
         'menu_icon'   => 'dashicons-admin-tools', // post type icon in admin menu 
         'rewrite' => array('slug' => 'service','with_front' => false),
-        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'), // features supported by the post type
+        'supports' => array(
+            'title',
+            'editor',
+            'author',
+            'thumbnail',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'page-attributes',
+            'post-formats',
+            'custom-fields'),// features supported by the post type
         'show_in_rest' => true, // for API endpoint
     );
 
@@ -233,10 +292,13 @@ function type_service_taxonomy() {
         'labels'=> array (
             'name' => 'service types', // label shown in admin menu
             'singular_name' => 'servicetype', 
+            
         ),
         'public' => true, // visible both in the admin panel and front end
         'hierarchical' => true, // category-kind taxonomy
         'show_in_rest' => true, // for API endpoint
+        
+
     );
 
     register_taxonomy('servicetype', array('service'), $args); 
@@ -260,3 +322,79 @@ function service_type_master_taxonomy() {
 }
 
 add_action('init', 'service_type_master_taxonomy'); // fires after loadng is completed but before any headers sent
+
+
+// Modifying display mode of the custom post lists in admin panel
+
+
+// if (function_exists('add_theme_support')) {
+//     add_theme_support('post-thumbnails');
+//     set_post_thumbnail_size( 220, 150 );
+//     add_image_size('storefront', 620, 270, true);
+// }
+
+
+
+function my_acf_admin_head() {
+    ?>
+    <style type="text/css">
+.acf-postbox {
+  background-color: #d1f9d8 !important;
+  color: #000;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.postbox-container .categorydiv {
+  background-color: #d1f9d8;
+  color: #000;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 15px;
+}
+
+.acf-postbox .acf-field .acf-label {
+  text-transform: uppercase;
+}
+
+.acf-postbox .acf-field .acf-label label {
+  display: block;
+  font-weight: bold;
+  font-size: 17px;
+  margin: 0 0 3px;
+  padding: 0;
+}
+
+.acf-postbox .acf-field .acf-field-group {
+  border-radius: 10px;
+}
+
+.acf-postbox .acf-field .acf-input {
+  border-radius: 10px;
+}
+
+.postbox-header {
+  font-size: 20px;
+}
+
+.acf-postbox .acf-field .acf-input a.button {
+  border-radius: 3px;
+  box-shadow: 0px 1px 4px -2px #333;
+  text-shadow: 0px -1px rgb(42, 42, 42);
+  color: white;
+  background: #1000ef;
+  width: 150px;
+  font-size: 16px;
+  padding: 2px;
+  outline: none;
+  border-color: none;
+  border-style: none;
+  text-align: center;
+}
+
+    </style>
+    <?php
+}
+
+add_action('acf/input/admin_head', 'my_acf_admin_head');
+
