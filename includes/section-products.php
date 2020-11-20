@@ -4,7 +4,6 @@
 Servics fetched by master 
 */
 ?>
-<!-- <p><?php echo $name;?></p> -->
 
 <?php 
 // Iterating though the Photos posts

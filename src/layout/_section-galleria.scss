@@ -72,16 +72,21 @@ h2 {
 
       @include min-media(laptop) {
         flex-direction: row;
-        align-items: auto;
+        justify-content: flex-start;
+      }
+
+      .slide:first-child {
+        display: flex;
+        align-items: flex-start;
       }
 
       .image-slide {
-        display: block;
         width: 100%;
         height: auto;
+
         @include min-media(laptop) {
           width: 60%;
-          height: auto;
+          height: 100% !important;
         }
       }
 

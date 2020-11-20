@@ -24,7 +24,7 @@ $the_query = new WP_Query( $args ); ?>
 
 <li><a href="<?php echo $insta['url']?>" target="_blank" rel="noopener noreferrer">
         <img src=" <?php echo get_template_directory_uri() . '/images/inst-icon.png'; ?>" alt="insta-icon" /></a></li>
-<li>Suomi | English</li>
+<li></li>
 </li>
 <?php endwhile; ?>
 <?php wp_reset_postdata(); ?>

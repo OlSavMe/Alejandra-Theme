@@ -14,7 +14,7 @@ Template Name: Galleria
 </div>
 
 <section class="master-info">
-    <h2>GALLERIA</h2>
+    <h2 class="page-title"><?php  the_title();?></h2>
     <?php get_template_part('includes/section', 'galleria');?>
 </section>
 

@@ -1,7 +1,7 @@
 <?php 
 
 /*
-Galleria reusable template partial
+Gallery reusable template partial
 */
 ?>
 <div class="master-galleria">
@@ -18,7 +18,7 @@ $args = array(
       array(
         'taxonomy' => 'master',
         'field' => 'slug',
-        'terms' =>  $name
+        'terms' =>  "galleria"
       ),
     ), 
 );
@@ -37,7 +37,7 @@ $the_query = new WP_Query( $args ); ?>
     <?php endwhile; ?>
     <?php wp_reset_postdata(); ?>
     <?php else : ?>
-    <p></p>
+    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
     <?php endif; ?>
 </div>
 
@@ -65,7 +65,7 @@ $the_query = new WP_Query( $args ); ?>
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
         <?php else : ?>
-        <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+        <p></p>
         <?php endif; ?>
     </div>
     <a class="previous" onClick="changeSlide(-1)">&#10094;</a>

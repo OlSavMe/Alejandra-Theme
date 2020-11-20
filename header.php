@@ -24,8 +24,21 @@
 
 
 
+
         <ul class='header-some'>
             <?php get_template_part('includes/section', 'some');?>
+            <li>
+                <ul>
+                    <?php 
+                    if ( function_exists( 'pll_the_languages' ) ) {
+                    pll_the_languages( array( 'show_flags' => 1,'show_names' => 1 ) );         
+                    }
+                    ?>
+                </ul>
+            </li>
+
         </ul>
+
+
 
     </header>

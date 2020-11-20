@@ -51,7 +51,6 @@
 <section class="master-varaus" id="master-varaus">
     <h2>AJANVARAUS</h2>
     <!-- <a href="<?php echo $masterprofile['booking_link']['url'];?>">
-        <p>Koko näyttö &rsaquo;</p>
     </a> -->
     <div class="iframe-container">
         <iframe src=" <?php echo $masterprofile['booking_link']['url'];?>" frameborder="0"></iframe>

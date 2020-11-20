@@ -9,9 +9,6 @@
             'fallback_cb' => false
          ) );
         ?>
-
-
-
         <?php 
 
 // Fetching Contact info
@@ -52,7 +49,6 @@ $the_query = new WP_Query( $args ); ?>
 
     <div class="footer-right">
         <ul>
-
             <li><img src="<?php echo get_template_directory_uri() . '/images/footer-logo.png'; ?>" alt="small-logo" />
             </li>
             <li>Alejandra Kauneussalonki</li>
@@ -133,7 +129,7 @@ $the_query = new WP_Query( $args ); ?>
         for (let i = 0; i < slides.length; i++) {
             slides[i].style.display = 'none';
         };
-        slides[slideIndex - 1].style.display = 'flex';
+        slides[slideIndex - 1].style.display = '-webkit-flex';
     };
 
 

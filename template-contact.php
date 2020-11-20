@@ -1,7 +1,7 @@
 <?php 
 
 /*
-Template Name: Yhteys
+Template Name: Contact
 */
 ?>
 
@@ -17,7 +17,8 @@ Template Name: Yhteys
 
 <section class="master-varaus" id="master-varaus">
     <h2 class="page-title"><?php  the_title();?></h2>
-    <p>Haluamme muistuttaa, että aukioloaikamme ovat joustavia asiakkaiden tarpeiden mukaan</p>
+    <p>
+        We would like to remind you that our opening hours are flexible according to customer needs</p>
     <?php  if (have_posts()) : while (have_posts()) : the_post();?>
     <?php  the_content();?>
     <?php  endwhile; endif;?>
@@ -41,7 +42,7 @@ $the_query = new WP_Query( $args ); ?>
     <?php $address = get_field('address');?>
     <?php $map = get_field('map_link');?>
 
-    <p>Palvelemme teitä osoitteessa: <?php echo $address?></p>
+    <p>We are located at: <?php echo $address?></p>
     <iframe src="<?php echo $map?>" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen=""
         aria-hidden="false" tabindex="0"></iframe>
     <?php endwhile; ?>

@@ -9,6 +9,14 @@ header {
     justify-content: space-between;
   }
 
+  .lang-item {
+    margin: 0;
+    float: left;
+    list-style: none;
+    font-size: 1rem;
+    padding: 0;
+  }
+
   .burger {
     width: auto;
     height: 2rem;
@@ -66,12 +74,6 @@ header {
         height: 1.3rem;
         width: auto;
       }
-    }
-
-    li:last-of-type {
-      // padding: 0 0 0 2rem;
-      // font-size: 1rem;
-      display: none;
     }
   }
 }

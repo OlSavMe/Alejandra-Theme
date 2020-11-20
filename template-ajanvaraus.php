@@ -14,10 +14,7 @@ Template Name: Ajanvaraus
 </div>
 
 <section class="master-varaus" id="master-varaus">
-    <h2>AJANVARAUS</h2>
-    <!-- <a href="https://phorest.com/book/salons/centrumalejandra#/">
-        <p>Koko näyttö &rsaquo;</p>
-    </a> -->
+    <h2 class="page-title"><?php  the_title();?></h2>
     <div class="iframe-container">
         <iframe src="http://centrumalejandra.phorest.me/book" width="900" height="auto" frameborder="0"></iframe>
     </div>

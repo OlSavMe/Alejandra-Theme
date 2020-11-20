@@ -1,6 +1,8 @@
 <?php 
 
-
+/*
+Template Name: English Gallery
+*/
 ?>
 
 <?php  get_header();?>
@@ -11,14 +13,11 @@
     </div>
 </div>
 
-<section class="master-varaus" id="master-varaus">
-    <h2>Ups! Page not found.</h2>
-
-
+<section class="master-info">
+    <h2 class="page-title"><?php  the_title();?></h2>
+    <?php get_template_part('includes/section', 'gallery');?>
 </section>
 
-
-
-
+<?php get_template_part('includes/section', 'floating-button');?>
 <?php get_footer();
 ?>

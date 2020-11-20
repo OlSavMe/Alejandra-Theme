@@ -12,9 +12,11 @@
 </div>
 
 <section class="master-varaus" id="master-varaus">
-    <h2>Ups! Page not found.</h2>
+    <h2><?php echo the_title();?></h2>
 
-
+    <?php  if (have_posts()) : while (have_posts()) : the_post();?>
+    <?php  the_content();?>
+    <?php  endwhile; endif;?>
 </section>
 
 
