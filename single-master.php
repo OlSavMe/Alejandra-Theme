@@ -28,17 +28,18 @@
 
     <a class="master-ref" href="#master-varaus">
 
-        <?php
-  $currentLanguage  = pll_current_language();
-    if ( $currentLanguage == "fi" ) {?>
+        <?php 
+    if ( function_exists( 'pll_current_language' ) ) {
+        $currentLanguage  = pll_current_language();
+        if ( $currentLanguage == "fi" ) {?>
         <p>Ajanvaraukseen</p>
         <?php
-    }
-    else { ?>
-        <p>To booking</p> <?php
-    }
+        }
+        else { ?>
+        <p>To booking</p><?php
+        }      
+        }
 ?>
-
 
 
         <img src="<?php echo get_template_directory_uri() . '/images/down-arrow.png'; ?>" alt="down-arrow" />
@@ -56,15 +57,17 @@
     <?php get_template_part('includes/section', 'products');?>
     <?php get_template_part('includes/section', 'services');?>
 
-    <?php
-  $currentLanguage  = pll_current_language();
-    if ( $currentLanguage == "fi" ) {?>
+    <?php 
+    if ( function_exists( 'pll_current_language' ) ) {
+        $currentLanguage  = pll_current_language();
+        if ( $currentLanguage == "fi" ) {?>
     <h2>GALLERIA</h2>
     <?php
-    }
-    else { ?>
+        }
+        else { ?>
     <h2>GALLERY</h2> <?php
-    }
+        }      
+        }
 ?>
 
 
@@ -73,16 +76,21 @@
 
 <section class="master-varaus" id="master-varaus">
 
-    <?php
-  $currentLanguage  = pll_current_language();
-    if ( $currentLanguage == "fi" ) {?>
+
+    <?php 
+    if ( function_exists( 'pll_current_language' ) ) {
+        $currentLanguage  = pll_current_language();
+        if ( $currentLanguage == "fi" ) {?>
     <h2>AJANVARAUS</h2>
     <?php
-    }
-    else { ?>
+        }
+        else { ?>
     <h2>RESERVATIONS</h2> <?php
-    }
+        }      
+        }
 ?>
+
+
     <div class="iframe-container">
         <iframe src=" <?php echo $masterprofile['booking_link']['url'];?>" frameborder="0"></iframe>
     </div>

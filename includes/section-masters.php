@@ -22,7 +22,18 @@ $the_query = new WP_Query( $args ); ?>
     <h1 class="card-heading"><?php echo $mastercard['master_name'];?></h1>
     <div class="grey-container">
         <p><?php echo $mastercard['master_services'];?></p>
-        <p class="varaa"><?php echo $txt?> &rsaquo;</p>
+        <?php 
+    if ( function_exists( 'pll_current_language' ) ) {
+        $currentLanguage  = pll_current_language();
+        if ( $currentLanguage == "fi" ) {?>
+        <p class="varaa">Tutustu & Varaa &rsaquo;</p>
+        <?php
+        }
+        else { ?>
+        <h2>Read more & Book &rsaquo;</h2><?php
+        }      
+        }
+?>
     </div>
 </a>
 

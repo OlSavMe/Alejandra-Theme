@@ -31,17 +31,19 @@ $the_query = new WP_Query( $args ); ?>
 
 <?php if ( $the_query->have_posts() ) : ?>
 
-
-<?php
-  $currentLanguage  = pll_current_language();
-    if ( $currentLanguage == "fi" ) {?>
+<?php 
+    if ( function_exists( 'pll_current_language' ) ) {
+        $currentLanguage  = pll_current_language();
+        if ( $currentLanguage == "fi" ) {?>
 <h2>PALVELUT</h2>
 <?php
-    }
-    else { ?>
+        }
+        else { ?>
 <h2>SERVICES</h2> <?php
-    }
+        }      
+        }
 ?>
+
 
 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 <?php $heading = get_field('service_type_name');?>
