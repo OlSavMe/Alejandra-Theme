@@ -231,3 +231,37 @@ register_taxonomy('by master', array('service'), $args);
 }
 
 add_action('init', 'service_type_master_taxonomy'); // fires after loadng is completed but before any headers sent
+
+
+// adding offer page post type
+
+function offer_post_type() {
+
+    $args = array (
+    'labels'=> array (
+    'name' => 'Offers', // label shown in admin menu
+    'singular_name' => 'offer', // name for one object of the post type
+    
+    ),
+    'hierarchical' => true,
+    'public' => true, // visible both in the admin panel and front end
+    'has_archive' => true, // enables archiving of the custom posts
+    'menu_icon' => 'dashicons-money-alt', // post type icon in admin menu
+    'rewrite' => array('slug' => 'offers','with_front' => false),
+    'supports' => array(
+    'title',
+    'editor',
+    'author',
+    'thumbnail',
+    'custom-fields',
+    'page-attributes',
+    'post-formats',
+    'custom-fields',),// features supported by the post type
+    'show_in_rest' => true, // for API endpoint
+    );
+    
+    register_post_type('offer', $args);
+    
+    }
+    
+    add_action('init', 'offer_post_type'); 

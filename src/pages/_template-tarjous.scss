@@ -1,0 +1,92 @@
+/* Tarjous */
+
+p,
+li {
+  font-size: 1rem;
+  @include min-media(mobile) {
+    font-size: 1.1rem;
+  }
+  @include min-media(tablet) {
+    font-size: 1.2rem;
+  }
+}
+
+h1,
+h2 {
+  font-size: 1.7rem;
+  letter-spacing: 1vw;
+  font-weight: bold;
+  padding: 3% 0 2% 0;
+  margin: 0;
+  @include min-media(mobile) {
+    font-size: 1.9rem;
+  }
+  @include min-media(tablet) {
+    font-size: 2.2rem;
+  }
+}
+
+.page-title {
+  text-transform: uppercase;
+  padding: 6% 0 2% 0;
+}
+
+.master {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  letter-spacing: 0.3rem;
+
+  /* hero-image for page */
+
+  .img-page-conainer {
+    justify-content: center;
+    margin: 2%;
+
+    img {
+      width: 12rem;
+      height: auto;
+      @include min-media(laptop) {
+        width: 16rem;
+      }
+    }
+  }
+}
+
+.offer-main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  color: white;
+  @include min-media(mobile) {
+    width: 80%;
+  }
+
+  .single-tarjous {
+    margin-bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .offer-photo {
+      justify-content: center;
+      margin: 0 0 2rem 0;
+      img {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .offer-link {
+      text-decoration: none;
+      color: $gold;
+    }
+  }
+}

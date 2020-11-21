@@ -18,7 +18,7 @@
 </section>
 
 <?php 
-// Iterating though the Masters posts
+// quering the Story post
 $args = array(  
     'post_type' => 'story', // name of the post type
     'post_status' => 'publish',

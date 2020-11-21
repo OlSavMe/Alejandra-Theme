@@ -11216,6 +11216,109 @@ div.wpcf7 input[type=submit]:visited {
   outline: none;
 }
 
+/* Tarjous */
+p,
+li {
+  font-size: 1rem;
+}
+@media (min-width: 425px) {
+  p,
+li {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 769px) {
+  p,
+li {
+    font-size: 1.2rem;
+  }
+}
+
+h1,
+h2 {
+  font-size: 1.7rem;
+  letter-spacing: 1vw;
+  font-weight: bold;
+  padding: 3% 0 2% 0;
+  margin: 0;
+}
+@media (min-width: 425px) {
+  h1,
+h2 {
+    font-size: 1.9rem;
+  }
+}
+@media (min-width: 769px) {
+  h1,
+h2 {
+    font-size: 2.2rem;
+  }
+}
+
+.page-title {
+  text-transform: uppercase;
+  padding: 6% 0 2% 0;
+}
+
+.master {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  letter-spacing: 0.3rem;
+  /* hero-image for page */
+}
+.master .img-page-conainer {
+  justify-content: center;
+  margin: 2%;
+}
+.master .img-page-conainer img {
+  width: 12rem;
+  height: auto;
+}
+@media (min-width: 1024px) {
+  .master .img-page-conainer img {
+    width: 16rem;
+  }
+}
+
+.offer-main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  color: white;
+}
+@media (min-width: 425px) {
+  .offer-main {
+    width: 80%;
+  }
+}
+.offer-main .single-tarjous {
+  margin-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.offer-main .single-tarjous .offer-photo {
+  justify-content: center;
+  margin: 0 0 2rem 0;
+}
+.offer-main .single-tarjous .offer-photo img {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+.offer-main .single-tarjous .offer-link {
+  text-decoration: none;
+  color: #dfb13f;
+}
+
 *,
 *::after,
 *::before {
