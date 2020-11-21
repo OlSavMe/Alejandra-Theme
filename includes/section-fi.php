@@ -38,7 +38,7 @@ $the_query = new WP_Query( $args ); ?>
 <section class="story">
     <h2>ALEJANDRA KAUNEAUSSALONKI</h2>
 
-    <?php echo esc_html($story);?>
+    <?php echo $story;?>
 
 
     <div class="photo-container">

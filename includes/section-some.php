@@ -17,7 +17,7 @@ $the_query = new WP_Query( $args ); ?>
 <?php $shortnumber = get_field('phone_without_prefix');?>
 <li>
     <a href="tel:+<?php echo $fullnumber;?>">
-        <?php echo esc_html($shortnumber);?></a>
+        <?php echo $shortnumber;?></a>
 </li>
 <li><a href="<?php echo esc_url($fb['url']);?>" target="_blank" rel="noopener noreferrer">
         <img src=" <?php echo get_template_directory_uri() . '/images/fb-icon.png'; ?>" alt="fb-icon" /></a></li>

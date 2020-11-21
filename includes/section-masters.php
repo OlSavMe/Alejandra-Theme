@@ -20,7 +20,7 @@ $the_query = new WP_Query( $args ); ?>
         <img src="<?php echo esc_url($mastercard['master_image']['url']);?>"
             alt="<?php echo esc_attr($mastercard['master_name']);?>" />
     </div>
-    <h1 class="card-heading"><?php echo esc_html($mastercard['master_name']);?></h1>
+    <h1 class="card-heading"><?php echo $mastercard['master_name'];?></h1>
     <div class="grey-container">
         <p><?php echo $mastercard['master_services'];?></p>
         <?php 
@@ -31,7 +31,7 @@ $the_query = new WP_Query( $args ); ?>
         <?php
         }
         else { ?>
-        <p>Read more & Book &rsaquo;</p><?php
+        <p class="varaa">Read more & Book &rsaquo;</p><?php
         }      
         }
 ?>

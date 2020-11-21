@@ -49,7 +49,7 @@
 <section class="master-info">
     <?php if ($masterprofile['about']):?>
     <p>
-        <?php echo esc_html($masterprofile['about']);?>
+        <?php echo $masterprofile['about'];?>
     </p>
     <?php endif; ?>
 

@@ -53,12 +53,12 @@ $the_query = new WP_Query( $args ); ?>
 <p class="heading"><?php echo $heading;?></p>
 <p><?php echo $main;?>
     <?php if (!$more):?>
-    <a href="<?php echo esc_url($link);?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html($link);?></a>
+    <a href="<?php echo esc_url($link);?>" target="_blank" rel="noopener noreferrer"><?php echo $link;?></a>
     <?php endif; ?>
 </p>
 <?php if ($more):?>
-<p class="more"><?php echo esc_html($more);?>
-    <a href="<?php echo esc_url($link);?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html($link);?></a>
+<p class="more"><?php echo $more;?>
+    <a href="<?php echo esc_url($link);?>" target="_blank" rel="noopener noreferrer"><?php echo $link;?></a>
 </p>
 <p class="show-more">
     [...]Lue lisää

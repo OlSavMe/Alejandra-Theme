@@ -16,7 +16,7 @@ Template Name: Contact
 </div>
 
 <section class="master-varaus" id="master-varaus">
-    <h2 class="page-title"><?php  the_title();?></h2>
+    <h2 class="page-title"><?php the_title();?></h2>
     <p>
         We would like to remind you that our opening hours are flexible according to customer needs</p>
     <?php  if (have_posts()) : while (have_posts()) : the_post();?>
