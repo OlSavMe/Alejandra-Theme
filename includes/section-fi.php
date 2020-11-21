@@ -1,6 +1,5 @@
 <?php  get_header();?>
 
-
 <div class="hero">
     <div class="img-container">
         <img src="<?php echo get_template_directory_uri() . '/images/logo-screen.png'; ?>" alt="logo" />

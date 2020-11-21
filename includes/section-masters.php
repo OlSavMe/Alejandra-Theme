@@ -12,6 +12,8 @@ $the_query = new WP_Query( $args ); ?>
 <?php if ( $the_query->have_posts() ) : ?>
 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 <?php $mastercard = get_field('master_card');?>
+<?php $txt = get_field('tutustu');?>
+
 
 <a href="<?php echo the_permalink()?>" class="master-card">
     <div class="pic-container">
@@ -20,7 +22,7 @@ $the_query = new WP_Query( $args ); ?>
     <h1 class="card-heading"><?php echo $mastercard['master_name'];?></h1>
     <div class="grey-container">
         <p><?php echo $mastercard['master_services'];?></p>
-        <p class="varaa">Tutustu & Varaa &rsaquo;</p>
+        <p class="varaa"><?php echo $txt?> &rsaquo;</p>
     </div>
 </a>
 

@@ -1,6 +1,5 @@
 <?php  get_header();?>
 
-
 <div class="hero">
     <div class="img-container">
         <img src="<?php echo get_template_directory_uri() . '/images/logo-screen.png'; ?>" alt="logo" />
@@ -32,7 +31,7 @@ $the_query = new WP_Query( $args ); ?>
 
 <?php if ( $the_query->have_posts() ) : ?>
 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-<?php $story = get_field('en-story');?>
+<?php $story = get_field('story');?>
 <?php $photo = get_field('salon_photo');?>
 <?php $mobilephoto = get_field('mobile_photo');?>
 

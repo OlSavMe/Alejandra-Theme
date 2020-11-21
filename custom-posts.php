@@ -160,30 +160,6 @@ register_post_type('story', $args);
 add_action('init', 'story_post_type');
 
 
-// Customs posts for Map in Contact page
-
-
-function map_post_type() {
-
-$args = array (
-'labels'=> array (
-'name' => 'Map', // label shown in admin menu
-'singular_name' => 'map', // name for one object of the post type
-
-),
-'public' => true, // visible both in the admin panel and front end
-'has_archive' => true, // enables archiving of the custom posts
-'menu_icon' => 'dashicons-admin-site', // post type icon in admin menu
-'rewrite' => array('slug' => 'map','with_front' => false),
-'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'), // features supported by the post type
-'show_in_rest' => true, // for API endpoint
-);
-
-register_post_type('map', $args);}
-
-add_action('init', 'map_post_type');
-
-
 // Customs posts for Services in Master Profiles
 
 function service_post_type() {
