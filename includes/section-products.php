@@ -30,7 +30,19 @@ $args = array(
 $the_query = new WP_Query( $args ); ?>
 
 <?php if ( $the_query->have_posts() ) : ?>
+
+
+<?php
+  $currentLanguage  = pll_current_language();
+    if ( $currentLanguage == "fi" ) {?>
 <h2>TUOTTEET</h2>
+<?php
+    }
+    else { ?>
+<h2>PRODUCTS</h2> <?php
+    }
+?>
+
 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 <?php $heading = get_field('service_type_name');?>
 <?php $main = get_field('service_main_text');?>

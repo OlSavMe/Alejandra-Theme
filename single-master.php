@@ -27,7 +27,20 @@
     </div>
 
     <a class="master-ref" href="#master-varaus">
+
+        <?php
+  $currentLanguage  = pll_current_language();
+    if ( $currentLanguage == "fi" ) {?>
         <p>Ajanvaraukseen</p>
+        <?php
+    }
+    else { ?>
+        <p>To booking</p> <?php
+    }
+?>
+
+
+
         <img src="<?php echo get_template_directory_uri() . '/images/down-arrow.png'; ?>" alt="down-arrow" />
     </a>
 </div>
@@ -43,15 +56,33 @@
     <?php get_template_part('includes/section', 'products');?>
     <?php get_template_part('includes/section', 'services');?>
 
-
+    <?php
+  $currentLanguage  = pll_current_language();
+    if ( $currentLanguage == "fi" ) {?>
     <h2>GALLERIA</h2>
+    <?php
+    }
+    else { ?>
+    <h2>GALLERY</h2> <?php
+    }
+?>
+
+
     <?php get_template_part('includes/section', 'galleria');?>
 </section>
 
 <section class="master-varaus" id="master-varaus">
+
+    <?php
+  $currentLanguage  = pll_current_language();
+    if ( $currentLanguage == "fi" ) {?>
     <h2>AJANVARAUS</h2>
-    <!-- <a href="<?php echo $masterprofile['booking_link']['url'];?>">
-    </a> -->
+    <?php
+    }
+    else { ?>
+    <h2>RESERVATIONS</h2> <?php
+    }
+?>
     <div class="iframe-container">
         <iframe src=" <?php echo $masterprofile['booking_link']['url'];?>" frameborder="0"></iframe>
     </div>
