@@ -43,8 +43,8 @@ $the_query = new WP_Query( $args ); ?>
     <?php $map = get_field('map_link');?>
 
     <p>We are located at: <?php echo $address?></p>
-    <iframe src="<?php echo $map?>" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen=""
-        aria-hidden="false" tabindex="0"></iframe>
+    <iframe src="<?php echo esc_url($map);?>" width="100%" height="500" frameborder="0" style="border:0;"
+        allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     <?php endwhile; ?>
     <?php wp_reset_postdata(); ?>
 

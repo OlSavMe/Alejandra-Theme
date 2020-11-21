@@ -56,7 +56,7 @@ $the_query = new WP_Query( $args ); ?>
             <img src="<?php echo esc_url($photo['url']);?>" alt="<?php the_title();?>" class="image-slide" />
             <section class="slide-comments">
                 <div class="comments">
-                    <?php echo $comments;?>
+                    <?php echo esc_html($comments);?>
                     <a href="<?php echo esc_url($link['url']);?>" target="_blank"
                         rel="noopener noreferrer"><?php echo esc_url($link['url']);?></a>
                 </div>

@@ -17,9 +17,10 @@ $the_query = new WP_Query( $args ); ?>
 
 <a href="<?php echo the_permalink()?>" class="master-card">
     <div class="pic-container">
-        <img src="<?php echo $mastercard['master_image']['url'];?>" alt="<?php echo $mastercard['master_name'];?>" />
+        <img src="<?php echo esc_url($mastercard['master_image']['url']);?>"
+            alt="<?php echo esc_attr($mastercard['master_name']);?>" />
     </div>
-    <h1 class="card-heading"><?php echo $mastercard['master_name'];?></h1>
+    <h1 class="card-heading"><?php echo esc_html($mastercard['master_name']);?></h1>
     <div class="grey-container">
         <p><?php echo $mastercard['master_services'];?></p>
         <?php 
@@ -30,7 +31,7 @@ $the_query = new WP_Query( $args ); ?>
         <?php
         }
         else { ?>
-        <h2>Read more & Book &rsaquo;</h2><?php
+        <p>Read more & Book &rsaquo;</p><?php
         }      
         }
 ?>

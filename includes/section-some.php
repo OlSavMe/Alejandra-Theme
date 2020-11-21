@@ -17,12 +17,12 @@ $the_query = new WP_Query( $args ); ?>
 <?php $shortnumber = get_field('phone_without_prefix');?>
 <li>
     <a href="tel:+<?php echo $fullnumber;?>">
-        <?php echo $shortnumber;?></a>
+        <?php echo esc_html($shortnumber);?></a>
 </li>
-<li><a href="<?php echo $fb['url']?>" target="_blank" rel="noopener noreferrer">
+<li><a href="<?php echo esc_url($fb['url']);?>" target="_blank" rel="noopener noreferrer">
         <img src=" <?php echo get_template_directory_uri() . '/images/fb-icon.png'; ?>" alt="fb-icon" /></a></li>
 
-<li><a href="<?php echo $insta['url']?>" target="_blank" rel="noopener noreferrer">
+<li><a href="<?php echo esc_url($insta['url']);?>" target="_blank" rel="noopener noreferrer">
         <img src=" <?php echo get_template_directory_uri() . '/images/inst-icon.png'; ?>" alt="insta-icon" /></a></li>
 <li></li>
 </li>

@@ -49,7 +49,7 @@
 <section class="master-info">
     <?php if ($masterprofile['about']):?>
     <p>
-        <?php echo $masterprofile['about'];?>
+        <?php echo esc_html($masterprofile['about']);?>
     </p>
     <?php endif; ?>
 
@@ -90,9 +90,8 @@
         }
 ?>
 
-
     <div class="iframe-container">
-        <iframe src=" <?php echo $masterprofile['booking_link']['url'];?>" frameborder="0"></iframe>
+        <iframe src=" <?php echo esc_url($masterprofile['booking_link']['url']);?>" frameborder="0"></iframe>
     </div>
     <p>
         Peruutusten tulee tapahtua 24 tuntia aikaisemmin, peruuttamattomista ajoista

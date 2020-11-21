@@ -38,12 +38,12 @@ $the_query = new WP_Query( $args ); ?>
 <section class="story">
     <h2>ALEJANDRA BEAUTY SALON</h2>
 
-    <?php echo $story?>
+    <?php echo esc_html($story);?>
 
 
     <div class="photo-container">
-        <img class='mobile-pic' src="<?php echo $mobilephoto['url']?>" alt="salon-mobile" />
-        <img class='desktop-pic' src="<?php echo $photo['url']?>" alt="salon" />
+        <img class='mobile-pic' src="<?php echo esc_url($mobilephoto['url']);?>" alt="salon-mobile" />
+        <img class='desktop-pic' src="<?php echo esc_url($photo['url']);?>" alt="salon" />
     </div>
 </section>
 <?php endwhile; ?>
